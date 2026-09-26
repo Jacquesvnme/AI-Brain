@@ -22,7 +22,7 @@ else {
     throw "No Desktop or API project file was found under: $sourceDir"
 }
 
-$outputDir = Join-Path $PSScriptRoot "$projectName.Deployment"
+$outputDir = Join-Path $PSScriptRoot "$projectName/$projectName.Deployment"
 
 if (Test-Path -LiteralPath $outputDir) {
     Remove-Item -LiteralPath $outputDir -Recurse -Force
