@@ -18,12 +18,15 @@ Before adding an example file to a project, replace or remove every double-brace
 
 - **.csharpierrc.json:** `{project-path}\base\example-files\.csharpierrc.json`
 - **.editorconfig:** `{project-path}\base\example-files\.editorconfig`
+- **.gitattributes:** `{project-path}\base\example-files\.gitattributes`
 - **.gitignore:** `{project-path}\base\example-files\.gitignore`
 - **AGENTS.md:** `{project-path}\base\example-files\AGENTS.md`
 - **Creation.md:** `{project-path}\base\example-files\Creation.md`
 - **DeleteBins.ps1:** `{project-path}\base\example-files\DeleteBins.ps1`
+- **Directory.Build.props:** `{project-path}\base\example-files\Directory.Build.props`
 - **dotnet-tools.json:** `{project-path}\base\example-files\dotnet-tools.json`
 - **LICENSE:** `{project-path}\base\example-files\LICENSE`
+- **Project.slnx:** `{project-path}\base\example-files\Project.slnx`
 - **ProjectExporter.ps1:** `{project-path}\base\example-files\ProjectExporter.ps1`
 - **README.md:** `{project-path}\base\example-files\README.md`
 
@@ -50,6 +53,16 @@ The file defines shared formatting, indentation, namespace, and code-style rules
 #### Example file
 
 `{project-path}\base\example-files\.editorconfig`
+
+### .gitattributes
+
+Copy the example `.gitattributes` into the outer project directory without changing its filename or contents.
+
+The file defines how Git handles line endings and binary files. It normalizes text files, uses LF line endings for source and configuration files, preserves CRLF line endings for Windows scripts, and prevents Git from treating supported image files as text.
+
+#### Example file
+
+`{project-path}\base\example-files\.gitattributes`
 
 ### .gitignore {{C#}}
 
@@ -111,6 +124,18 @@ The script recursively deletes directories named `bin` or `obj`. It does not sea
 
 `{project-path}\base\example-files\DeleteBins.ps1`
 
+### Directory.Build.props
+
+Copy the example `Directory.Build.props` into the outer project directory without changing its filename or contents.
+
+Place it in the top-most project directory, next to the `.slnx` solution file. Its settings apply to all `.csproj` projects in that directory and its subdirectories.
+
+The file enables build-time enforcement of code-style rules that are configured as warnings or errors.
+
+#### Example file
+
+`{project-path}\base\example-files\Directory.Build.props`
+
 ### dotnet-tools.json {{C#}}
 
 Create a `.config` directory inside the outer project directory.
@@ -142,6 +167,35 @@ Do not modify the remaining license text or the copyright holder’s name.
 #### Example file
 
 `{project-path}\base\example-files\LICENSE`
+
+### Project.slnx
+
+Copy the example `Project.slnx` into the outer project directory, next to `Directory.Build.props`.
+
+Rename the file by replacing `Project` with the main project name. The main project name must match the name of the outer project directory.
+
+For example, if the outer project directory is named `SuperDummyApplication`, the solution filename must be:
+
+`SuperDummyApplication.slnx`
+
+Replace every `PROJECT_NAME` placeholder inside the file with the same main project name.
+
+The solution file must contain a relative path to every `.csproj` and `.esproj` project in the solution. Remove example project entries that do not exist, and add entries for any projects not represented by the example.
+
+The `.esproj` entry for `PROJECT_NAME.UI` must always contain both `<Build />` and `<Deploy />`:
+
+```xml
+<Project Path="PROJECT_NAME/PROJECT_NAME.UI/PROJECT_NAME.UI.esproj">
+  <Build />
+  <Deploy />
+</Project>
+```
+
+Do not add <Build /> or <Deploy /> to the .csproj entries.
+
+#### Example file
+
+`{project-path}\base\example-files\Project.slnx`
 
 ### ProjectExporter.ps1 {{C#}}
 

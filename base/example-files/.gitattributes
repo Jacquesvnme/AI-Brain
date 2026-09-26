@@ -1,0 +1,18 @@
+# Automatically normalize text-file line endings
+* text=auto
+
+# Use LF for cross-platform configuration and source files
+*.cs text eol=lf
+*.csproj text eol=lf
+*.slnx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Keep Windows scripts on CRLF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Treat images as binary
+*.png binary
+*.jpg binary
+*.ico binary
