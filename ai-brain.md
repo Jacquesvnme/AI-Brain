@@ -12,6 +12,12 @@ The `project-path` variable is the absolute path to the AI Brain repository. In 
 
 If the repository moves, update `project-path` here. Paths that begin with `{project-path}` do not need to be edited individually. Also update any standalone bootstrap file that must locate `ai-brain.md` before this variable is available.
 
+## Project context
+
+If the purpose of the AI Brain project or repository is unclear, read its project description before continuing:
+
+- **description.md:** `{project-path}\projects\ai-brain\description.md`
+
 ## Required rules
 
 Required rules apply to every project and task.
