@@ -34,3 +34,6 @@ indent_size = 4
 
 [*.md]
 trim_trailing_whitespace = false
+
+[*.cs]
+dotnet_diagnostic.IDE0005.severity = warning
