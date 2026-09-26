@@ -1,45 +1,3 @@
-# Required base files
-
-This document defines the base files to add when the `basic-requirements` optional rule applies.
-
-Every file section must include an applicability tag:
-
-- `{{All}}` applies to every project type.
-- Any other tag applies only when the project matches that tag.
-
-Examples:
-
-- `### README.md {{All}}` applies to every project type.
-- `### .editorconfig {{C#}}` applies only to C# projects.
-
-Follow the destination instructions in every applicable section. Each section must provide the absolute path to its example file.
-
-## Important notice
-
-Text enclosed in double braces, such as `{{instruction}}`, is instructional placeholder text inside the example files.
-
-Before adding an example file to a project, replace or remove every double-braced placeholder. Double-braced instructional text must not appear in the final project file.
-
-## Example file navigation
-
-- **.csharpierrc.json:** `{project-path}\base\example-files\.csharpierrc.json`
-- **.editorconfig:** `{project-path}\base\example-files\.editorconfig`
-- **.gitattributes:** `{project-path}\base\example-files\.gitattributes`
-- **.gitignore:** `{project-path}\base\example-files\.gitignore`
-- **AGENTS.md:** `{project-path}\base\example-files\AGENTS.md`
-- **Creation.md:** `{project-path}\base\example-files\Creation.md`
-- **DeleteBins.ps1:** `{project-path}\base\example-files\DeleteBins.ps1`
-- **Directory.Build.props:** `{project-path}\base\example-files\Directory.Build.props`
-- **dotnet-tools.json:** `{project-path}\base\example-files\dotnet-tools.json`
-- **LICENSE:** `{project-path}\base\example-files\LICENSE`
-- **Project.slnx:** `{project-path}\base\example-files\Project.slnx`
-- **ProjectExporter.ps1:** `{project-path}\base\example-files\ProjectExporter.ps1`
-- **README.md:** `{project-path}\base\example-files\README.md`
-
-## Sections
-
-Apply every section tagged `{{All}}` and every section whose applicability tag matches the project type. Do not apply sections with nonmatching tags.
-
 ### .csharpierrc.json {{C#}}
 
 Copy the example `.csharpierrc.json` into the outer project directory without changing its filename or contents.
@@ -79,46 +37,6 @@ Use the provided file directly. Do not generate another `.gitignore` with the .N
 #### Example file
 
 `{project-path}\base\example-files\.gitignore`
-
-### AGENTS.md {{All}}
-
-Copy the example `AGENTS.md` into the outer project directory without changing its filename.
-
-The file must direct Codex to read and follow the rules in the central AI Brain before modifying the project.
-
-The reference to the AI Brain must include its absolute path:
-
-`C:\~ My Files\AI-Brain\ai-brain.md`
-
-Required rules always apply. Optional rules apply only when their description matches the current work or when the user explicitly requests them.
-
-#### Example file
-
-`{project-path}\base\example-files\AGENTS.md`
-
-### Creation.md {{All}}
-
-Copy the example `Creation.md` into the outer project directory.
-
-`Creation.md` records the exact commands used to create every component project and add its direct package dependencies.
-
-In this file, **project** means a project defined by a `.csproj` or `.esproj` file. It does not mean the `.sln` or `.slnx` solution file.
-
-Create one section for every `.csproj` and `.esproj` project in the solution.
-
-For each project, include:
-
-- the full project name;
-- the exact command or commands used in PowerShell to create it; and
-- the exact package-manager command used to add each direct package dependency.
-
-If no packages were added to a project, omit its package-command list.
-
-Replace or remove every double-braced placeholder before adding the file to the project.
-
-#### Example file
-
-`{project-path}\base\example-files\Creation.md`
 
 ### DeleteBins.ps1 {{C#}}
 
@@ -161,18 +79,6 @@ dotnet tool restore
 #### Example file
 
 `{project-path}\base\example-files\dotnet-tools.json`
-
-### LICENSE {{All}}
-
-Copy the example `LICENSE` into the outer project directory without changing its filename.
-
-The example contains the Apache License 2.0. Replace `{{Current year in the format: yyyy}}` with the current four-digit year.
-
-Do not modify the remaining license text or the copyright holder’s name.
-
-#### Example file
-
-`{project-path}\base\example-files\LICENSE`
 
 ### Project.slnx {{C#}}
 
@@ -223,15 +129,3 @@ The output is written to `PROJECT_NAME.Deployment` inside the outer project dire
 #### Example file
 
 `{project-path}\base\example-files\ProjectExporter.ps1`
-
-### README.md {{All}}
-
-Copy the example `README.md` into the outer project directory without changing its filename.
-
-Replace `PROJECT_NAME` with the actual project name.
-
-Remove the double-braced instructional placeholder. Do not add a project description; the user will add it manually.
-
-#### Example file
-
-`{project-path}\base\example-files\README.md`
