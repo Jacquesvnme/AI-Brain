@@ -6,10 +6,10 @@ Apply every section in this file. Copy each referenced template to the destinati
 
 ## Template file navigation
 
-- **AGENTS.md:** `{project-path}\base\project-file-templates\all\AGENTS.md`
-- **Creation.md:** `{project-path}\base\project-file-templates\all\Creation.md`
-- **LICENSE:** `{project-path}\base\project-file-templates\all\LICENSE`
-- **README.md:** `{project-path}\base\project-file-templates\all\README.md`
+- **AGENTS.md:** `{project-path}\base\project-files\all\templates\AGENTS.md`
+- **Creation.md:** `{project-path}\base\project-files\all\templates\Creation.md`
+- **LICENSE:** `{project-path}\base\project-files\all\templates\LICENSE`
+- **README.md:** `{project-path}\base\project-files\all\templates\README.md`
 
 ## AGENTS.md
 
@@ -25,7 +25,7 @@ Required rules always apply. Optional rules apply only when their description ma
 
 ### Template file
 
-`{project-path}\base\project-file-templates\all\AGENTS.md`
+`{project-path}\base\project-files\all\templates\AGENTS.md`
 
 ## Creation.md
 
@@ -49,7 +49,7 @@ Replace or remove every double-braced placeholder before adding the file to the 
 
 ### Template file
 
-`{project-path}\base\project-file-templates\all\Creation.md`
+`{project-path}\base\project-files\all\templates\Creation.md`
 
 ## LICENSE
 
@@ -61,7 +61,7 @@ Do not modify the remaining license text or the copyright holder’s name.
 
 ### Template file
 
-`{project-path}\base\project-file-templates\all\LICENSE`
+`{project-path}\base\project-files\all\templates\LICENSE`
 
 ## README.md
 
@@ -73,4 +73,4 @@ Remove the double-braced instructional placeholder. Do not add a project descrip
 
 ### Template file
 
-`{project-path}\base\project-file-templates\all\README.md`
+`{project-path}\base\project-files\all\templates\README.md`

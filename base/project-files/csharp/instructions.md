@@ -6,15 +6,15 @@ Apply every section in this file in addition to the all-project file set. Copy e
 
 ## Template file navigation
 
-- **.csharpierrc.json:** `{project-path}\base\project-file-templates\csharp\.csharpierrc.json`
-- **.editorconfig:** `{project-path}\base\project-file-templates\csharp\.editorconfig`
-- **.gitattributes:** `{project-path}\base\project-file-templates\csharp\.gitattributes`
-- **.gitignore:** `{project-path}\base\project-file-templates\csharp\.gitignore`
-- **DeleteBins.ps1:** `{project-path}\base\project-file-templates\csharp\DeleteBins.ps1`
-- **Directory.Build.props:** `{project-path}\base\project-file-templates\csharp\Directory.Build.props`
-- **dotnet-tools.json:** `{project-path}\base\project-file-templates\csharp\dotnet-tools.json`
-- **Project.slnx:** `{project-path}\base\project-file-templates\csharp\Project.slnx`
-- **ProjectExporter.ps1:** `{project-path}\base\project-file-templates\csharp\ProjectExporter.ps1`
+- **.csharpierrc.json:** `{project-path}\base\project-files\csharp\templates\.csharpierrc.json`
+- **.editorconfig:** `{project-path}\base\project-files\csharp\templates\.editorconfig`
+- **.gitattributes:** `{project-path}\base\project-files\csharp\templates\.gitattributes`
+- **.gitignore:** `{project-path}\base\project-files\csharp\templates\.gitignore`
+- **DeleteBins.ps1:** `{project-path}\base\project-files\csharp\templates\DeleteBins.ps1`
+- **Directory.Build.props:** `{project-path}\base\project-files\csharp\templates\Directory.Build.props`
+- **dotnet-tools.json:** `{project-path}\base\project-files\csharp\templates\dotnet-tools.json`
+- **Project.slnx:** `{project-path}\base\project-files\csharp\templates\Project.slnx`
+- **ProjectExporter.ps1:** `{project-path}\base\project-files\csharp\templates\ProjectExporter.ps1`
 
 ## .csharpierrc.json
 
@@ -24,7 +24,7 @@ The file defines the CSharpier formatting rules for C#, project, configuration, 
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\.csharpierrc.json`
+`{project-path}\base\project-files\csharp\templates\.csharpierrc.json`
 
 ## .editorconfig
 
@@ -34,7 +34,7 @@ The file defines shared formatting, indentation, namespace, and code-style rules
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\.editorconfig`
+`{project-path}\base\project-files\csharp\templates\.editorconfig`
 
 ## .gitattributes
 
@@ -44,7 +44,7 @@ The file defines how Git handles line endings and binary files. It normalizes te
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\.gitattributes`
+`{project-path}\base\project-files\csharp\templates\.gitattributes`
 
 ## .gitignore
 
@@ -54,7 +54,7 @@ Use the provided file directly. Do not generate another `.gitignore` with the .N
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\.gitignore`
+`{project-path}\base\project-files\csharp\templates\.gitignore`
 
 ## DeleteBins.ps1
 
@@ -64,7 +64,7 @@ The script recursively deletes directories named `bin` or `obj`. It does not sea
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\DeleteBins.ps1`
+`{project-path}\base\project-files\csharp\templates\DeleteBins.ps1`
 
 ## Directory.Build.props
 
@@ -76,7 +76,7 @@ The file enables build-time enforcement of code-style rules that are configured 
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\Directory.Build.props`
+`{project-path}\base\project-files\csharp\templates\Directory.Build.props`
 
 ## dotnet-tools.json
 
@@ -96,7 +96,7 @@ dotnet tool restore
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\dotnet-tools.json`
+`{project-path}\base\project-files\csharp\templates\dotnet-tools.json`
 
 ## Project.slnx
 
@@ -125,7 +125,7 @@ Do not add <Build /> or <Deploy /> to the .csproj entries.
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\Project.slnx`
+`{project-path}\base\project-files\csharp\templates\Project.slnx`
 
 ## ProjectExporter.ps1
 
@@ -146,4 +146,4 @@ The output is written to `PROJECT_NAME.Deployment` inside the outer project dire
 
 ### Template file
 
-`{project-path}\base\project-file-templates\csharp\ProjectExporter.ps1`
+`{project-path}\base\project-files\csharp\templates\ProjectExporter.ps1`

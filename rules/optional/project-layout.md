@@ -12,13 +12,13 @@ Select exactly one layout based on the requested project type. Do not combine la
 
 Use this layout when the solution requires a React UI, Web API, and Windows Desktop application.
 
-**absolute-path:** `{project-path}\base\project-layout\reactwebapi-desktop.md`
+**absolute-path:** `{project-path}\base\project-layout\react-web-api-desktop.md`
 
 ## React Web API
 
 Use this layout when the solution requires a React UI and Web API without a Desktop application.
 
-**absolute-path:** `{project-path}\base\project-layout\reactwebapi.md`
+**absolute-path:** `{project-path}\base\project-layout\react-web-api.md`
 
 ## Console
 
