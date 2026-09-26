@@ -1,9 +1,7 @@
 # Project layout
 
 **rule-name:** project-layout
-
 **absolute-directory:** `{project-path}\base\project-layout`
-
 **rule-description:**
 
 Apply this optional rule only when creating a new project or when the user explicitly requests that an existing project be restructured.

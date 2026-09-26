@@ -33,3 +33,18 @@ PROJECT_NAME/
 ├── Project.slnx
 └── README.md
 ```
+
+## Project creation instructions
+
+Read and apply each of these project creation instruction files for this layout:
+
+- **project-slnx.md:** `{project-path}\base\project-creation\instructions\project-slnx.md`
+- **project-console.md:** `{project-path}\base\project-creation\instructions\project-console.md`
+- **project-domain.md:** `{project-path}\base\project-creation\instructions\project-domain.md`
+- **project-test.md:** `{project-path}\base\project-creation\instructions\project-test.md`
+
+### Automated creation script
+
+Use this script to create a new Console solution with its SLNX, Console, Domain, and Test projects, and register all three component projects in the solution:
+
+- **create-console-project.ps1:** `{project-path}\base\project-creation\scripts\create-console-project.ps1`

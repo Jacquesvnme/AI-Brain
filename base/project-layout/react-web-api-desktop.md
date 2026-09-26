@@ -38,3 +38,19 @@ PROJECT_NAME/
 ├── ProjectExporter.ps1
 └── README.md
 ```
+
+## Project creation instructions
+
+Read and apply each of these project creation instruction files for this layout:
+
+- **project-slnx.md:** `{project-path}\base\project-creation\instructions\project-slnx.md`
+- **project-ui-and-api.md:** `{project-path}\base\project-creation\instructions\project-ui-and-api.md`
+- **project-desktop.md:** `{project-path}\base\project-creation\instructions\project-desktop.md`
+- **project-domain.md:** `{project-path}\base\project-creation\instructions\project-domain.md`
+- **project-test.md:** `{project-path}\base\project-creation\instructions\project-test.md`
+
+### Automated creation script
+
+Use this script to create a new React Web API with Desktop solution with its SLNX, UI, API, Desktop, Domain, and Test projects, perform the required generated-project renaming, and register all component projects in the solution:
+
+- **create-react-web-api-desktop.ps1:** `{project-path}\base\project-creation\scripts\create-react-web-api-desktop.ps1`
