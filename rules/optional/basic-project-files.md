@@ -1,7 +1,7 @@
-# basic-requirements
+# basic-project-files
 
-**rule-name:** basic-requirements
-**absolute-path:** `Z:\AI-Brain\base\basic-requirements.md`
+**rule-name:** basic-project-files
+**absolute-path:** `Z:\AI-Brain\base\basic-project-files.md`
 **rule-description:**
 
 Apply this rule when creating a new project or adding the standard base files to an existing project.

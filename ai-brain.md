@@ -20,5 +20,5 @@ Review each optional rule before starting work and apply only the relevant rules
 
 ### Rules
 
-- **basic-requirements.md:** `Z:\AI-Brain\rules\optional\basic-requirements.md`
+- **basic-requirements.md:** `Z:\AI-Brain\rules\optional\basic-project-files.md`
 - **project-layout.md:** `Z:\AI-Brain\rules\optional\project-layout.md`
