@@ -1,13 +1,28 @@
 # =========================================================================
-# CI/CD for easy export and deployment
-# Change the $outputDir to the absolute path you want to publish to
-# Will delete all previous files and then publish the new files
+# Publishes the Desktop project when present, otherwise the API project.
+# The output is written to PROJECT_NAME.Deployment in the outer project
+# directory. Existing contents in that directory are deleted first.
 # =========================================================================
 
 $ErrorActionPreference = 'Stop'
 
-$projectPath = Join-Path $PSScriptRoot 'ModLedger\ModLedger.Desktop\ModLedger.Desktop.csproj'
-$outputDir = 'C:\~ My Files\Application-Collection.Deployments\ModLedger'
+$projectName = Split-Path -Leaf $PSScriptRoot
+$sourceDir = Join-Path $PSScriptRoot $projectName
+
+$desktopProjectPath = Join-Path $sourceDir "$projectName.Desktop\$projectName.Desktop.csproj"
+$apiProjectPath = Join-Path $sourceDir "$projectName.Api\$projectName.Api.csproj"
+
+if (Test-Path -LiteralPath $desktopProjectPath -PathType Leaf) {
+    $projectPath = $desktopProjectPath
+}
+elseif (Test-Path -LiteralPath $apiProjectPath -PathType Leaf) {
+    $projectPath = $apiProjectPath
+}
+else {
+    throw "No Desktop or API project file was found under: $sourceDir"
+}
+
+$outputDir = Join-Path $PSScriptRoot "$projectName.Deployment"
 
 if (Test-Path -LiteralPath $outputDir) {
     Remove-Item -LiteralPath $outputDir -Recurse -Force

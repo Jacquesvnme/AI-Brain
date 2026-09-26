@@ -1,0 +1,27 @@
+{
+  "printWidth": 140,
+  "indentSize": 4,
+  "useTabs": false,
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": "*.{csproj,props,targets,slnx,xml,xaml,axaml}",
+      "formatter": "xml",
+      "printWidth": 140,
+      "useTabs": false,
+      "indentSize": 2,
+      "endOfLine": "auto",
+      "xmlWhitespaceSensitivity": "strict"
+    },
+    {
+      "files": "*.config",
+      "formatter": "xml",
+      "indentSize": 2
+    },
+    {
+      "files": "*.svg",
+      "formatter": "xml",
+      "indentSize": 2
+    }
+  ]
+}
