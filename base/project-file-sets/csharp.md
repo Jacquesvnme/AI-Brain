@@ -1,70 +1,88 @@
-### .csharpierrc.json {{C#}}
+# Files required for C# projects
 
-Copy the example `.csharpierrc.json` into the outer project directory without changing its filename or contents.
+This file defines the additional standard files required when a solution contains one or more C# projects represented by `.csproj` files.
+
+Apply every section in this file in addition to the all-project file set. Copy each referenced template to the destination specified by its section.
+
+## Template file navigation
+
+- **.csharpierrc.json:** `{project-path}\base\project-file-templates\csharp\.csharpierrc.json`
+- **.editorconfig:** `{project-path}\base\project-file-templates\csharp\.editorconfig`
+- **.gitattributes:** `{project-path}\base\project-file-templates\csharp\.gitattributes`
+- **.gitignore:** `{project-path}\base\project-file-templates\csharp\.gitignore`
+- **DeleteBins.ps1:** `{project-path}\base\project-file-templates\csharp\DeleteBins.ps1`
+- **Directory.Build.props:** `{project-path}\base\project-file-templates\csharp\Directory.Build.props`
+- **dotnet-tools.json:** `{project-path}\base\project-file-templates\csharp\dotnet-tools.json`
+- **Project.slnx:** `{project-path}\base\project-file-templates\csharp\Project.slnx`
+- **ProjectExporter.ps1:** `{project-path}\base\project-file-templates\csharp\ProjectExporter.ps1`
+
+## .csharpierrc.json
+
+Copy the template `.csharpierrc.json` into the outer project directory without changing its filename or contents.
 
 The file defines the CSharpier formatting rules for C#, project, configuration, and supported XML files.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\.csharpierrc.json`
+`{project-path}\base\project-file-templates\csharp\.csharpierrc.json`
 
-### .editorconfig {{C#}}
+## .editorconfig
 
-Copy the example `.editorconfig` into the outer project directory without changing its filename or contents.
+Copy the template `.editorconfig` into the outer project directory without changing its filename or contents.
 
 The file defines shared formatting, indentation, namespace, and code-style rules for the project.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\.editorconfig`
+`{project-path}\base\project-file-templates\csharp\.editorconfig`
 
-### .gitattributes {{C#}}
+## .gitattributes
 
-Copy the example `.gitattributes` into the outer project directory without changing its filename or contents.
+Copy the template `.gitattributes` into the outer project directory without changing its filename or contents.
 
 The file defines how Git handles line endings and binary files. It normalizes text files, uses LF line endings for source and configuration files, preserves CRLF line endings for Windows scripts, and prevents Git from treating supported image files as text.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\.gitattributes`
+`{project-path}\base\project-file-templates\csharp\.gitattributes`
 
-### .gitignore {{C#}}
+## .gitignore
 
-Copy the example `.gitignore` into the outer project directory without changing its filename.
+Copy the template `.gitignore` into the outer project directory without changing its filename.
 
 Use the provided file directly. Do not generate another `.gitignore` with the .NET CLI.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\.gitignore`
+`{project-path}\base\project-file-templates\csharp\.gitignore`
 
-### DeleteBins.ps1 {{C#}}
+## DeleteBins.ps1
 
-Copy the example `DeleteBins.ps1` into the outer project directory without changing its filename or contents.
+Copy the template `DeleteBins.ps1` into the outer project directory without changing its filename or contents.
 
 The script recursively deletes directories named `bin` or `obj`. It does not search inside `.git`, `.vs`, `.codegraph`, or `node_modules` directories. It also skips reparse points.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\DeleteBins.ps1`
+`{project-path}\base\project-file-templates\csharp\DeleteBins.ps1`
 
-### Directory.Build.props {{C#}}
+## Directory.Build.props
 
-Copy the example `Directory.Build.props` into the outer project directory without changing its filename or contents.
+Copy the template `Directory.Build.props` into the outer project directory without changing its filename or contents.
 
 Place it in the top-most project directory, next to the `.slnx` solution file. Its settings apply to all `.csproj` projects in that directory and its subdirectories.
 
 The file enables build-time enforcement of code-style rules that are configured as warnings or errors.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\Directory.Build.props`
+`{project-path}\base\project-file-templates\csharp\Directory.Build.props`
 
-### dotnet-tools.json {{C#}}
+## dotnet-tools.json
 
 Create a `.config` directory inside the outer project directory.
 
-Copy the example `dotnet-tools.json` into that directory without changing its filename or contents. Its final location must be:
+Copy the template `dotnet-tools.json` into that directory without changing its filename or contents. Its final location must be:
 
 `.config\dotnet-tools.json`
 
@@ -76,13 +94,13 @@ Restore the tool by running this command from the outer project directory:
 dotnet tool restore
 ```
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\dotnet-tools.json`
+`{project-path}\base\project-file-templates\csharp\dotnet-tools.json`
 
-### Project.slnx {{C#}}
+## Project.slnx
 
-Copy the example `Project.slnx` into the outer project directory, next to `Directory.Build.props`.
+Copy the template `Project.slnx` into the outer project directory, next to `Directory.Build.props`.
 
 Rename the file by replacing `Project` with the main project name. The main project name must match the name of the outer project directory.
 
@@ -92,7 +110,7 @@ For example, if the outer project directory is named `SuperDummyApplication`, th
 
 Replace every `PROJECT_NAME` placeholder inside the file with the same main project name.
 
-The solution file must contain a relative path to every `.csproj` and `.esproj` project in the solution. Remove example project entries that do not exist, and add entries for any projects not represented by the example.
+The solution file must contain a relative path to every `.csproj` and `.esproj` project in the solution. Remove template project entries that do not exist, and add entries for any projects not represented by the template.
 
 The `.esproj` entry for `PROJECT_NAME.UI` must always contain both `<Build />` and `<Deploy />`:
 
@@ -105,11 +123,11 @@ The `.esproj` entry for `PROJECT_NAME.UI` must always contain both `<Build />` a
 
 Do not add <Build /> or <Deploy /> to the .csproj entries.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\Project.slnx`
+`{project-path}\base\project-file-templates\csharp\Project.slnx`
 
-### ProjectExporter.ps1 {{C#}}
+## ProjectExporter.ps1
 
 `ProjectExporter.ps1` publishes the project as a self-contained Windows application.
 
@@ -126,6 +144,6 @@ The API project is used only when the Desktop project does not exist. If neither
 
 The output is written to `PROJECT_NAME.Deployment` inside the outer project directory. Any existing deployment directory is deleted before publishing.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\ProjectExporter.ps1`
+`{project-path}\base\project-file-templates\csharp\ProjectExporter.ps1`

@@ -28,5 +28,5 @@ Review each optional rule before starting work and apply only the relevant rules
 
 ### Rules
 
-- **basic-requirements.md:** `{project-path}\rules\optional\basic-project-files.md`
+- **required-project-files.md:** `{project-path}\rules\optional\required-project-files.md`
 - **project-layout.md:** `{project-path}\rules\optional\project-layout.md`

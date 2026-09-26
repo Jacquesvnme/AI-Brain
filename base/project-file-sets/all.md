@@ -1,6 +1,19 @@
-### AGENTS.md {{All}}
+# Files required for all projects
 
-Copy the example `AGENTS.md` into the outer project directory without changing its filename.
+This file defines the standard files required for every project type.
+
+Apply every section in this file. Copy each referenced template to the destination specified by its section and complete any project-specific placeholders before finishing.
+
+## Template file navigation
+
+- **AGENTS.md:** `{project-path}\base\project-file-templates\all\AGENTS.md`
+- **Creation.md:** `{project-path}\base\project-file-templates\all\Creation.md`
+- **LICENSE:** `{project-path}\base\project-file-templates\all\LICENSE`
+- **README.md:** `{project-path}\base\project-file-templates\all\README.md`
+
+## AGENTS.md
+
+Copy the template `AGENTS.md` into the outer project directory without changing its filename.
 
 The file must direct Codex to read and follow the rules in the central AI Brain before modifying the project.
 
@@ -10,13 +23,13 @@ The reference to the AI Brain must include its absolute path:
 
 Required rules always apply. Optional rules apply only when their description matches the current work or when the user explicitly requests them.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\AGENTS.md`
+`{project-path}\base\project-file-templates\all\AGENTS.md`
 
-### Creation.md {{All}}
+## Creation.md
 
-Copy the example `Creation.md` into the outer project directory.
+Copy the template `Creation.md` into the outer project directory.
 
 `Creation.md` records the exact commands used to create every component project and add its direct package dependencies.
 
@@ -34,30 +47,30 @@ If no packages were added to a project, omit its package-command list.
 
 Replace or remove every double-braced placeholder before adding the file to the project.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\Creation.md`
+`{project-path}\base\project-file-templates\all\Creation.md`
 
-### README.md {{All}}
+## LICENSE
 
-Copy the example `README.md` into the outer project directory without changing its filename.
+Copy the template `LICENSE` into the outer project directory without changing its filename.
+
+The template contains the Apache License 2.0. Replace `{{Current year in the format: yyyy}}` with the current four-digit year.
+
+Do not modify the remaining license text or the copyright holder’s name.
+
+### Template file
+
+`{project-path}\base\project-file-templates\all\LICENSE`
+
+## README.md
+
+Copy the template `README.md` into the outer project directory without changing its filename.
 
 Replace `PROJECT_NAME` with the actual project name.
 
 Remove the double-braced instructional placeholder. Do not add a project description; the user will add it manually.
 
-#### Example file
+### Template file
 
-`{project-path}\base\example-files\README.md`
-
-### LICENSE {{All}}
-
-Copy the example `LICENSE` into the outer project directory without changing its filename.
-
-The example contains the Apache License 2.0. Replace `{{Current year in the format: yyyy}}` with the current four-digit year.
-
-Do not modify the remaining license text or the copyright holder’s name.
-
-#### Example file
-
-`{project-path}\base\example-files\LICENSE`
+`{project-path}\base\project-file-templates\all\README.md`

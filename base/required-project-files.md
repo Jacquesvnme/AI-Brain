@@ -1,41 +1,23 @@
-# Required base files
+# Required project files
 
-This document defines the base files to add when the `basic-requirements` optional rule applies.
+This document identifies the project file sets to apply when the `required-project-files` optional rule is active.
 
-Every file section must include an applicability tag:
+Project file requirements are separated by applicability so that an agent only needs to read the instructions relevant to the current project.
 
-- `{{All}}` applies to every project type.
-- Any other tag applies only when the project matches that tag.
+## Applying the file sets
 
-Examples:
+Always read and apply the all-project file set:
 
-- `### README.md {{All}}` applies to every project type.
-- `### .editorconfig {{C#}}` applies only to C# projects.
+- **All projects:** `{project-path}\base\project-file-sets\all.md`
 
-Follow the destination instructions in every applicable section. Each section must provide the absolute path to its example file.
+Then identify the project types present and read only the matching project-specific file sets:
+
+- **C# projects:** `{project-path}\base\project-file-sets\csharp.md`
+
+Apply every instruction in each selected file set. Do not read or apply a project-specific file set when its project type is not present.
 
 ## Important notice
 
-Text enclosed in double braces, such as `{{instruction}}`, is instructional placeholder text inside the example files.
+Text enclosed in double braces, such as `{{instruction}}`, is instructional placeholder text inside the project file templates.
 
-Before adding an example file to a project, replace or remove every double-braced placeholder. Double-braced instructional text must not appear in the final project file.
-
-## Example file navigation
-
-- **.csharpierrc.json:** `{project-path}\base\example-files\.csharpierrc.json`
-- **.editorconfig:** `{project-path}\base\example-files\.editorconfig`
-- **.gitattributes:** `{project-path}\base\example-files\.gitattributes`
-- **.gitignore:** `{project-path}\base\example-files\.gitignore`
-- **AGENTS.md:** `{project-path}\base\example-files\AGENTS.md`
-- **Creation.md:** `{project-path}\base\example-files\Creation.md`
-- **DeleteBins.ps1:** `{project-path}\base\example-files\DeleteBins.ps1`
-- **Directory.Build.props:** `{project-path}\base\example-files\Directory.Build.props`
-- **dotnet-tools.json:** `{project-path}\base\example-files\dotnet-tools.json`
-- **LICENSE:** `{project-path}\base\example-files\LICENSE`
-- **Project.slnx:** `{project-path}\base\example-files\Project.slnx`
-- **ProjectExporter.ps1:** `{project-path}\base\example-files\ProjectExporter.ps1`
-- **README.md:** `{project-path}\base\example-files\README.md`
-
-## Sections
-
-Apply every section tagged `{{All}}` and every section whose applicability tag matches the project type. Do not apply sections with nonmatching tags.
+Before adding a template file to a project, replace or remove every double-braced placeholder. Double-braced instructional text must not appear in the final project file.
