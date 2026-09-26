@@ -16,16 +16,16 @@ Before adding an example file to a project, replace or remove every double-brace
 
 ## Example file navigation
 
-- **.csharpierrc.json:** `Z:\AI-Brain\base\example-files\.csharpierrc.json`
-- **.editorconfig:** `Z:\AI-Brain\base\example-files\.editorconfig`
-- **.gitignore:** `Z:\AI-Brain\base\example-files\.gitignore`
-- **AGENTS.md:** `Z:\AI-Brain\base\example-files\AGENTS.md`
-- **Creation.md:** `Z:\AI-Brain\base\example-files\Creation.md`
-- **DeleteBins.ps1:** `Z:\AI-Brain\base\example-files\DeleteBins.ps1`
-- **dotnet-tools.json:** `Z:\AI-Brain\base\example-files\dotnet-tools.json`
-- **LICENSE:** `Z:\AI-Brain\base\example-files\LICENSE`
-- **ProjectExporter.ps1:** `Z:\AI-Brain\base\example-files\ProjectExporter.ps1`
-- **README.md:** `Z:\AI-Brain\base\example-files\README.md`
+- **.csharpierrc.json:** `{project-path}\base\example-files\.csharpierrc.json`
+- **.editorconfig:** `{project-path}\base\example-files\.editorconfig`
+- **.gitignore:** `{project-path}\base\example-files\.gitignore`
+- **AGENTS.md:** `{project-path}\base\example-files\AGENTS.md`
+- **Creation.md:** `{project-path}\base\example-files\Creation.md`
+- **DeleteBins.ps1:** `{project-path}\base\example-files\DeleteBins.ps1`
+- **dotnet-tools.json:** `{project-path}\base\example-files\dotnet-tools.json`
+- **LICENSE:** `{project-path}\base\example-files\LICENSE`
+- **ProjectExporter.ps1:** `{project-path}\base\example-files\ProjectExporter.ps1`
+- **README.md:** `{project-path}\base\example-files\README.md`
 
 ## Sections
 
@@ -39,7 +39,7 @@ The file defines the CSharpier formatting rules for C#, project, configuration, 
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\.csharpierrc.json`
+`{project-path}\base\example-files\.csharpierrc.json`
 
 ### .editorconfig {{C#}}
 
@@ -49,7 +49,7 @@ The file defines shared formatting, indentation, namespace, and code-style rules
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\.editorconfig`
+`{project-path}\base\example-files\.editorconfig`
 
 ### .gitignore {{C#}}
 
@@ -59,7 +59,7 @@ Use the provided file directly. Do not generate another `.gitignore` with the .N
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\.gitignore`
+`{project-path}\base\example-files\.gitignore`
 
 ### AGENTS.md
 
@@ -69,13 +69,13 @@ The file must direct Codex to read and follow the rules in the central AI Brain 
 
 The reference to the AI Brain must include its absolute path:
 
-`Z:\AI-Brain\ai-brain.md`
+`C:\~ My Files\AI-Brain\ai-brain.md`
 
 Required rules always apply. Optional rules apply only when their description matches the current work or when the user explicitly requests them.
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\AGENTS.md`
+`{project-path}\base\example-files\AGENTS.md`
 
 ### Creation.md
 
@@ -99,7 +99,7 @@ Replace or remove every double-braced placeholder before adding the file to the 
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\Creation.md`
+`{project-path}\base\example-files\Creation.md`
 
 ### DeleteBins.ps1 {{C#}}
 
@@ -109,7 +109,7 @@ The script recursively deletes directories named `bin` or `obj`. It does not sea
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\DeleteBins.ps1`
+`{project-path}\base\example-files\DeleteBins.ps1`
 
 ### dotnet-tools.json {{C#}}
 
@@ -129,7 +129,7 @@ dotnet tool restore
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\dotnet-tools.json`
+`{project-path}\base\example-files\dotnet-tools.json`
 
 ### LICENSE
 
@@ -141,7 +141,7 @@ Do not modify the remaining license text or the copyright holder’s name.
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\LICENSE`
+`{project-path}\base\example-files\LICENSE`
 
 ### ProjectExporter.ps1 {{C#}}
 
@@ -162,7 +162,7 @@ The output is written to `PROJECT_NAME.Deployment` inside the outer project dire
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\ProjectExporter.ps1`
+`{project-path}\base\example-files\ProjectExporter.ps1`
 
 ### README.md
 
@@ -174,4 +174,4 @@ Remove the double-braced instructional placeholder. Do not add a project descrip
 
 #### Example file
 
-`Z:\AI-Brain\base\example-files\README.md`
+`{project-path}\base\example-files\README.md`
