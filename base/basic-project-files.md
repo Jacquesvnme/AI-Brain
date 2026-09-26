@@ -2,11 +2,17 @@
 
 This document defines the base files to add when the `basic-requirements` optional rule applies.
 
-An untagged file section applies to every project type. A section containing an applicability tag applies only when the project matches that tag.
+Every file section must include an applicability tag:
 
-Example: `### File name {{C#}}` applies only to C# projects.
+- `{{All}}` applies to every project type.
+- Any other tag applies only when the project matches that tag.
 
-Follow the destination instructions in each section. Each section must provide the absolute path to its example file.
+Examples:
+
+- `### README.md {{All}}` applies to every project type.
+- `### .editorconfig {{C#}}` applies only to C# projects.
+
+Follow the destination instructions in every applicable section. Each section must provide the absolute path to its example file.
 
 ## Important notice
 
@@ -32,7 +38,7 @@ Before adding an example file to a project, replace or remove every double-brace
 
 ## Sections
 
-Apply every untagged section and every tagged section that matches the project type.
+Apply every section tagged `{{All}}` and every section whose applicability tag matches the project type. Do not apply sections with nonmatching tags.
 
 ### .csharpierrc.json {{C#}}
 
@@ -54,7 +60,7 @@ The file defines shared formatting, indentation, namespace, and code-style rules
 
 `{project-path}\base\example-files\.editorconfig`
 
-### .gitattributes
+### .gitattributes {{C#}}
 
 Copy the example `.gitattributes` into the outer project directory without changing its filename or contents.
 
@@ -74,7 +80,7 @@ Use the provided file directly. Do not generate another `.gitignore` with the .N
 
 `{project-path}\base\example-files\.gitignore`
 
-### AGENTS.md
+### AGENTS.md {{All}}
 
 Copy the example `AGENTS.md` into the outer project directory without changing its filename.
 
@@ -90,7 +96,7 @@ Required rules always apply. Optional rules apply only when their description ma
 
 `{project-path}\base\example-files\AGENTS.md`
 
-### Creation.md
+### Creation.md {{All}}
 
 Copy the example `Creation.md` into the outer project directory.
 
@@ -124,7 +130,7 @@ The script recursively deletes directories named `bin` or `obj`. It does not sea
 
 `{project-path}\base\example-files\DeleteBins.ps1`
 
-### Directory.Build.props
+### Directory.Build.props {{C#}}
 
 Copy the example `Directory.Build.props` into the outer project directory without changing its filename or contents.
 
@@ -156,7 +162,7 @@ dotnet tool restore
 
 `{project-path}\base\example-files\dotnet-tools.json`
 
-### LICENSE
+### LICENSE {{All}}
 
 Copy the example `LICENSE` into the outer project directory without changing its filename.
 
@@ -168,7 +174,7 @@ Do not modify the remaining license text or the copyright holder’s name.
 
 `{project-path}\base\example-files\LICENSE`
 
-### Project.slnx
+### Project.slnx {{C#}}
 
 Copy the example `Project.slnx` into the outer project directory, next to `Directory.Build.props`.
 
@@ -218,7 +224,7 @@ The output is written to `PROJECT_NAME.Deployment` inside the outer project dire
 
 `{project-path}\base\example-files\ProjectExporter.ps1`
 
-### README.md
+### README.md {{All}}
 
 Copy the example `README.md` into the outer project directory without changing its filename.
 
