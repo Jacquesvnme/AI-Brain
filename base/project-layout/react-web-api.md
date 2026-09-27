@@ -19,6 +19,8 @@ PROJECT_NAME/
     │   └── PROJECT_NAME.Api.csproj
     ├── PROJECT_NAME.Domain/
     │   └── PROJECT_NAME.Domain.csproj
+    ├── PROJECT_NAME.Identity/
+    │   └── PROJECT_NAME.Identity.csproj
     ├── PROJECT_NAME.Infrastructure/
     │   └── PROJECT_NAME.Infrastructure.csproj
     ├── PROJECT_NAME.Test/
@@ -46,11 +48,12 @@ Read and apply each of these project creation instruction files for this layout:
 - **project-slnx.md:** `{project-path}\base\project-creation\instructions\project-slnx.md`
 - **project-ui-and-api.md:** `{project-path}\base\project-creation\instructions\project-ui-and-api.md`
 - **project-domain.md:** `{project-path}\base\project-creation\instructions\project-domain.md`
+- **project-identity.md:** `{project-path}\base\project-creation\instructions\project-identity.md`
 - **project-infrastructure.md:** `{project-path}\base\project-creation\instructions\project-infrastructure.md`
 - **project-test.md:** `{project-path}\base\project-creation\instructions\project-test.md`
 
 ### Automated creation script
 
-Use this script to create a new React Web API solution with its SLNX, UI, API, Domain, Infrastructure, and Test projects, perform the required generated-project renaming, and register all component projects in the solution:
+Use this script to create a new React Web API solution with its SLNX, UI, API, Domain, Identity, Infrastructure, and Test projects, perform the required generated-project renaming, and register all component projects in the solution:
 
 - **create-react-web-api.ps1:** `{project-path}\base\project-creation\scripts\create-react-web-api.ps1`

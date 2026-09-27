@@ -39,6 +39,13 @@ if ($LASTEXITCODE -eq 0) {
     throw "Failed to create ${ProjectName}.Domain"
 }
 
+dotnet new classlib --name "${ProjectName}.Identity" --output "${ProjectName}/${ProjectName}.Identity" --framework $Framework
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "✓ Created ${ProjectName}.Identity" -ForegroundColor Green
+} else {
+    throw "Failed to create ${ProjectName}.Identity"
+}
+
 dotnet new classlib --name "${ProjectName}.Infrastructure" --output "${ProjectName}/${ProjectName}.Infrastructure" --framework $Framework
 if ($LASTEXITCODE -eq 0) {
     Write-Host "✓ Created ${ProjectName}.Infrastructure" -ForegroundColor Green
@@ -65,6 +72,7 @@ $ProjectPaths = @(
     "${ProjectName}/${ProjectName}.Api/${ProjectName}.Api.csproj"
     "${ProjectName}/${ProjectName}.Desktop/${ProjectName}.Desktop.csproj"
     "${ProjectName}/${ProjectName}.Domain/${ProjectName}.Domain.csproj"
+    "${ProjectName}/${ProjectName}.Identity/${ProjectName}.Identity.csproj"
     "${ProjectName}/${ProjectName}.Infrastructure/${ProjectName}.Infrastructure.csproj"
     "${ProjectName}/${ProjectName}.Test/${ProjectName}.Test.csproj"
     "${ProjectName}/${ProjectName}.UI/${ProjectName}.UI.esproj"

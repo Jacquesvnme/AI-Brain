@@ -21,6 +21,7 @@ Treat the specialized project layouts and complete scripts as defaults, not as r
 An explicit user requirement to include or exclude a component takes precedence over the standard layout. Apply clear implications in the request as well. For example:
 
 - omit the Infrastructure project when the user specifies that the solution will not use a database or other persistence infrastructure;
+- omit the Identity project when the solution does not require authentication, authorization, or identity-related data and classes;
 - omit the Test project when the user explicitly does not want a test project;
 - omit the Desktop project when a Windows Forms host is not required;
 - omit the Console project when the solution is not a console application; and
@@ -67,6 +68,7 @@ Example/            ← outer solution directory; run creation commands here
 └── Example/        ← inner source directory
     ├── Example.Console/
     ├── Example.Domain/
+    ├── Example.Identity/
     └── Example.Infrastructure/
 ```
 
@@ -79,6 +81,7 @@ For example, `--output Example/Example.Infrastructure` creates the Infrastructur
 - **project-console.md:** `{project-path}\base\project-creation\instructions\project-console.md`
 - **project-desktop.md:** `{project-path}\base\project-creation\instructions\project-desktop.md`
 - **project-domain.md:** `{project-path}\base\project-creation\instructions\project-domain.md`
+- **project-identity.md:** `{project-path}\base\project-creation\instructions\project-identity.md`
 - **project-infrastructure.md:** `{project-path}\base\project-creation\instructions\project-infrastructure.md`
 - **project-slnx.md:** `{project-path}\base\project-creation\instructions\project-slnx.md`
 - **project-test.md:** `{project-path}\base\project-creation\instructions\project-test.md`
@@ -94,8 +97,8 @@ For example, `--output Example/Example.Infrastructure` creates the Infrastructur
 
 Select exactly one script only when its complete default component set matches the requested solution:
 
-- **Console:** Use `create-console-project.ps1`. It creates the SLNX, Console, Domain, Infrastructure, and Test projects.
-- **React Web API:** Use `create-react-web-api.ps1`. It creates the SLNX, UI, API, Domain, Infrastructure, and Test projects.
+- **Console:** Use `create-console-project.ps1`. It creates the SLNX, Console, Domain, Identity, Infrastructure, and Test projects.
+- **React Web API:** Use `create-react-web-api.ps1`. It creates the SLNX, UI, API, Domain, Identity, Infrastructure, and Test projects.
 - **React Web API with Desktop:** Use `create-react-web-api-desktop.ps1`. It creates everything in the React Web API layout plus the Desktop project.
 
 The React scripts require the `reactwebapi` .NET template to be installed before execution. Each script creates the `.slnx`, creates and renames its required component projects, and registers those projects in the solution. A script stops when a command returns a nonzero exit code or a required rename or solution-registration operation fails. It prints a green success message after each successful operation.
