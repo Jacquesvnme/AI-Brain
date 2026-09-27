@@ -22,6 +22,13 @@ if ($LASTEXITCODE -eq 0) {
     throw "Failed to create ${ProjectName}.Domain"
 }
 
+dotnet new classlib --name "${ProjectName}.Infrastructure" --output "${ProjectName}/${ProjectName}.Infrastructure" --framework $Framework
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "✓ Created ${ProjectName}.Infrastructure" -ForegroundColor Green
+} else {
+    throw "Failed to create ${ProjectName}.Infrastructure"
+}
+
 dotnet new mstest --name "${ProjectName}.Test" --output "${ProjectName}/${ProjectName}.Test" --framework $Framework
 if ($LASTEXITCODE -eq 0) {
     Write-Host "✓ Created ${ProjectName}.Test" -ForegroundColor Green
@@ -40,6 +47,7 @@ $SolutionPath = "${ProjectName}.slnx"
 $ProjectPaths = @(
     "${ProjectName}/${ProjectName}.Console/${ProjectName}.Console.csproj"
     "${ProjectName}/${ProjectName}.Domain/${ProjectName}.Domain.csproj"
+    "${ProjectName}/${ProjectName}.Infrastructure/${ProjectName}.Infrastructure.csproj"
     "${ProjectName}/${ProjectName}.Test/${ProjectName}.Test.csproj"
 )
 

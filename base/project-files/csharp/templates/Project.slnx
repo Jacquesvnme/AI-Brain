@@ -2,6 +2,7 @@
   <Project Path="PROJECT_NAME/PROJECT_NAME.Api/PROJECT_NAME.Api.csproj" />
   <Project Path="PROJECT_NAME/PROJECT_NAME.Desktop/PROJECT_NAME.Desktop.csproj" />
   <Project Path="PROJECT_NAME/PROJECT_NAME.Domain/PROJECT_NAME.Domain.csproj" />
+  <Project Path="PROJECT_NAME/PROJECT_NAME.Infrastructure/PROJECT_NAME.Infrastructure.csproj" />
   <Project Path="PROJECT_NAME/PROJECT_NAME.Test/PROJECT_NAME.Test.csproj" />
   <Project Path="PROJECT_NAME/PROJECT_NAME.UI/PROJECT_NAME.UI.esproj">
     <Build />

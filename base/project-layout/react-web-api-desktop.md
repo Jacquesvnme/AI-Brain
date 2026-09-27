@@ -21,6 +21,8 @@ PROJECT_NAME/
     │   └── PROJECT_NAME.Desktop.csproj
     ├── PROJECT_NAME.Domain/
     │   └── PROJECT_NAME.Domain.csproj
+    ├── PROJECT_NAME.Infrastructure/
+    │   └── PROJECT_NAME.Infrastructure.csproj
     ├── PROJECT_NAME.Test/
     │   └── PROJECT_NAME.Test.csproj
     └── PROJECT_NAME.UI/
@@ -47,10 +49,11 @@ Read and apply each of these project creation instruction files for this layout:
 - **project-ui-and-api.md:** `{project-path}\base\project-creation\instructions\project-ui-and-api.md`
 - **project-desktop.md:** `{project-path}\base\project-creation\instructions\project-desktop.md`
 - **project-domain.md:** `{project-path}\base\project-creation\instructions\project-domain.md`
+- **project-infrastructure.md:** `{project-path}\base\project-creation\instructions\project-infrastructure.md`
 - **project-test.md:** `{project-path}\base\project-creation\instructions\project-test.md`
 
 ### Automated creation script
 
-Use this script to create a new React Web API with Desktop solution with its SLNX, UI, API, Desktop, Domain, and Test projects, perform the required generated-project renaming, and register all component projects in the solution:
+Use this script to create a new React Web API with Desktop solution with its SLNX, UI, API, Desktop, Domain, Infrastructure, and Test projects, perform the required generated-project renaming, and register all component projects in the solution:
 
 - **create-react-web-api-desktop.ps1:** `{project-path}\base\project-creation\scripts\create-react-web-api-desktop.ps1`
