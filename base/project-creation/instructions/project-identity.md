@@ -21,3 +21,7 @@ PROJECT_NAME/
 └── PROJECT_NAME.Identity/
     └── PROJECT_NAME.Identity.csproj
 ```
+
+## Expected structure
+
+- **project-identity.md:** `{project-path}\base\project-structure\instructions\project-identity.md`

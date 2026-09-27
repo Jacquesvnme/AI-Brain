@@ -21,3 +21,7 @@ PROJECT_NAME/
 └── PROJECT_NAME.Infrastructure/
     └── PROJECT_NAME.Infrastructure.csproj
 ```
+
+## Expected structure
+
+- **project-infrastructure.md:** `{project-path}\base\project-structure\instructions\project-infrastructure.md`

@@ -21,3 +21,7 @@ PROJECT_NAME/
 └── PROJECT_NAME.Test/
     └── PROJECT_NAME.Test.csproj
 ```
+
+## Expected structure
+
+- **project-test.md:** `{project-path}\base\project-structure\instructions\project-test.md`

@@ -21,3 +21,7 @@ PROJECT_NAME/
 └── PROJECT_NAME.Desktop/
     └── PROJECT_NAME.Desktop.csproj
 ```
+
+## Expected structure
+
+- **project-desktop.md:** `{project-path}\base\project-structure\instructions\project-desktop.md`

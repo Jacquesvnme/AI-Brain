@@ -38,3 +38,8 @@ PROJECT_NAME/
 └── PROJECT_NAME.UI/
     └── PROJECT_NAME.UI.esproj
 ```
+
+## Expected structure
+
+- **project-api.md:** `{project-path}\base\project-structure\instructions\project-api.md`
+- **project-ui.md:** `{project-path}\base\project-structure\instructions\project-ui.md`

@@ -21,3 +21,7 @@ PROJECT_NAME/
 └── PROJECT_NAME.Domain/
     └── PROJECT_NAME.Domain.csproj
 ```
+
+## Expected structure
+
+- **project-domain.md:** `{project-path}\base\project-structure\instructions\project-domain.md`

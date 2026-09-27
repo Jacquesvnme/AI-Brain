@@ -21,3 +21,7 @@ PROJECT_NAME/
 └── PROJECT_NAME.Console/
     └── PROJECT_NAME.Console.csproj
 ```
+
+## Expected structure
+
+- **project-console.md:** `{project-path}\base\project-structure\instructions\project-console.md`
