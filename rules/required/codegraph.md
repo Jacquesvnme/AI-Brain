@@ -1,6 +1,7 @@
 # CodeGraph
 
 **rule-name:** CodeGraph
+**absolute-directory:** `{project-path}\.codegraph`
 **rule-description:**
 
 Use CodeGraph as the primary method for locating and understanding code.
