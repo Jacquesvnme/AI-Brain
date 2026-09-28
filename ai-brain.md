@@ -18,6 +18,12 @@ If the purpose of the AI Brain project or repository is unclear, read its projec
 
 - **description.md:** `{project-path}\projects\ai-brain\description.md`
 
+## Skills
+
+The skills catalogue separates custom AI Brain workflows from skills supplied by OpenAI and the wider skill ecosystem. Read its index when the user names a skill, a listed skill clearly matches the task, or the task involves discovering, installing, documenting, or creating skills.
+
+- **skills.md:** `{project-path}\skills\skills.md`
+
 ## Required rules
 
 Required rules apply to every project and task.
@@ -25,6 +31,7 @@ Required rules apply to every project and task.
 ### Rules
 
 - **codegraph.md:** `{project-path}\rules\required\codegraph.md`
+- **project-conventions.md:** `{project-path}\rules\required\project-conventions.md`
 
 ## Optional rules
 
@@ -38,3 +45,4 @@ Review each optional rule before starting work and apply only the relevant rules
 - **required-project-files.md:** `{project-path}\rules\optional\required-project-files.md`
 - **project-layout.md:** `{project-path}\rules\optional\project-layout.md`
 - **project-structure.md:** `{project-path}\rules\optional\project-structure.md`
+- **visualize-ui.md:** `{project-path}\rules\optional\visualize-ui.md`

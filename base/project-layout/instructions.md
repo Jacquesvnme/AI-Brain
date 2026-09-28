@@ -44,3 +44,9 @@ Treat each layout as the standard default for its solution type. Explicit user r
 8. Verify that every generated `.slnx`, `.csproj`, and `.esproj` path matches the final layout and that the solution references the correct relative project paths.
 
 Do not apply a project layout merely while inspecting an existing solution. Restructure an existing solution only when the task explicitly includes creating, restructuring, or correcting its layout.
+
+## Architecture skills
+
+For a non-standard layout whose project seams or responsibilities need architectural design, read `{project-path}\skills\external\codebase-design.md`. When the user asks to analyze or improve the architecture of an existing solution, also read `{project-path}\skills\external\improve-codebase-architecture.md`.
+
+These skills help evaluate interfaces, coupling, locality, and project responsibilities. They do not override the selected standard layout or authorize restructuring unless the user requested that change.

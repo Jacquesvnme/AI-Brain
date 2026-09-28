@@ -14,6 +14,17 @@ These instructions complement the other project guidance:
 
 For example, if the application is named `SuperDummyApplication`, `PROJECT_NAME.Domain` becomes `SuperDummyApplication.Domain`.
 
+## Project structure navigation
+
+- **project-api.md:** `{project-path}\base\project-structure\instructions\project-api.md`
+- **project-console.md:** `{project-path}\base\project-structure\instructions\project-console.md`
+- **project-desktop.md:** `{project-path}\base\project-structure\instructions\project-desktop.md`
+- **project-domain.md:** `{project-path}\base\project-structure\instructions\project-domain.md`
+- **project-identity.md:** `{project-path}\base\project-structure\instructions\project-identity.md`
+- **project-infrastructure.md:** `{project-path}\base\project-structure\instructions\project-infrastructure.md`
+- **project-test.md:** `{project-path}\base\project-structure\instructions\project-test.md`
+- **project-ui.md:** `{project-path}\base\project-structure\instructions\project-ui.md`
+
 ## Applying the instructions
 
 1. Identify the projects that are present in the solution or included in the current task.
@@ -25,3 +36,5 @@ For example, if the application is named `SuperDummyApplication`, `PROJECT_NAME.
 7. When an individual instruction states that no opinion has been defined, use reasonable conventions appropriate to that project's responsibilities without treating them as an AI Brain standard.
 
 When reviewing an existing project, compare only the applicable project-structure instructions against that project. Do not restructure unrelated projects, and do not modify an existing structure unless the task includes creating, restructuring, or correcting it.
+
+When a structure decision depends on module interfaces, seams, adapters, testability, or architectural locality, read `{project-path}\skills\external\codebase-design.md`. For an explicit architecture-improvement task, also read `{project-path}\skills\external\improve-codebase-architecture.md` before proposing structural changes.

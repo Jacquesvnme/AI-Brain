@@ -4,6 +4,12 @@ This file defines the additional standard files required when a solution contain
 
 Apply every section in this file in addition to the all-project file set. Copy each referenced template to the destination specified by its section.
 
+These instructions complement the all-project file instructions, project creation, and project layout. Apply them from the outer solution directory and preserve a generated, populated solution file when the project-creation instructions require updating it instead of copying the solution template.
+
+## Variables
+
+**PROJECT_NAME:** The actual application or solution name. It must match the outer solution directory, the inner source directory, and the project-name placeholders used by the applicable layout.
+
 ## Template file navigation
 
 - **.csharpierrc.json:** `{project-path}\base\project-files\csharp\templates\.csharpierrc.json`
@@ -147,3 +153,13 @@ The output is written to `PROJECT_NAME.Deployment` inside the outer project dire
 ### Template file
 
 `{project-path}\base\project-files\csharp\templates\ProjectExporter.ps1`
+
+## Applying the instructions
+
+1. Apply the all-project file instructions first.
+2. Confirm the actual project name and the component projects present in the solution.
+3. Copy each applicable C# template to its documented destination.
+4. Rename and populate placeholder-based files as instructed.
+5. Update an existing generated `.slnx` rather than overwriting it when project creation has already registered component projects.
+6. Remove unused solution entries and add every existing `.csproj` and `.esproj` exactly once with the correct relative path.
+7. Restore local tools and verify the final solution, configuration files, and conditional publishing script.

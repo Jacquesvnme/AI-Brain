@@ -15,6 +15,9 @@ PROJECT_NAME.Api/
 ├── Handlers/
 │   └── Feature/
 │       └── ActionFeatureHandler.cs
+├── Validators/
+│   └── Feature/
+│       └── ActionFeatureValidator.cs
 ├── Properties/
 │   └── launchSettings.json
 ├── Utils/
@@ -42,6 +45,16 @@ The `Handlers` directory contains API operation handlers, grouped into directori
 Name handlers by combining the operation, the subject, and the `Handler` suffix. For example, the handler that adds a mod is named `AddModHandler.cs`.
 
 The `Handlers` directory and this naming convention are specific to the API project's application handlers. Other projects should not introduce an equivalent handler structure unless their own project-structure instructions define one.
+
+### Validators
+
+The `Validators` directory contains reusable or non-trivial validation for API input. Group validators by the same controller, feature, or resource used under `Handlers`. For example, validation for mod operations belongs in `Validators/Mods`.
+
+Name a validator for the operation or request it validates and add the `Validator` suffix, such as `AddModValidator.cs` or `AddModRequestValidator.cs`. Use one naming approach consistently within the project.
+
+Controllers run transport validation before sending a query or command. Validators check request shape, required values, ranges, formats, and relationships among input fields. Database state, authorization decisions, and business invariants remain handler or domain responsibilities unless the project deliberately defines another validation boundary.
+
+Only add the directory when the API has validation that benefits from extraction. Small checks may remain in a controller when a separate type would obscure the endpoint flow.
 
 ### DependencyInjection
 

@@ -4,6 +4,14 @@ This file defines the standard files required for every project type.
 
 Apply every section in this file. Copy each referenced template to the destination specified by its section and complete any project-specific placeholders before finishing.
 
+These instructions complement project creation and project layout. Apply them to the outer solution directory after its initial layout exists, without overwriting populated generated files unless the relevant section explicitly requires replacement.
+
+## Variables
+
+**PROJECT_NAME:** The actual application or solution name. Replace every `PROJECT_NAME` placeholder with this value.
+
+**Current year:** The current four-digit year used where a template explicitly requests it.
+
 ## Template file navigation
 
 - **AGENTS.md:** `{project-path}\base\project-files\all\templates\AGENTS.md`
@@ -74,3 +82,12 @@ Remove the double-braced instructional placeholder. Do not add a project descrip
 ### Template file
 
 `{project-path}\base\project-files\all\templates\README.md`
+
+## Applying the instructions
+
+1. Confirm the outer solution directory and actual project name.
+2. Read the template navigation and every file section in this document.
+3. Copy each template to its documented destination.
+4. Replace or remove every documented placeholder without changing fixed template content.
+5. Preserve generated or already populated files when the applicable project-creation instructions say to update them instead of overwriting them.
+6. Verify that every required file exists at the outer solution level with the correct filename and project-specific values.
