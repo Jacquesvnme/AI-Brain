@@ -1,16 +1,11 @@
 # CodeGraph
 
-**rule-name:** CodeGraph
+**rule-name:** codegraph
 **absolute-directory:** `{project-path}\.codegraph`
 **rule-description:**
 
 Use CodeGraph as the primary method for locating and understanding code.
 
-For every code repository:
+Apply this rule only when the repository root contains a `.codegraph` directory. Use CodeGraph before grep, file search, or broad source reading when locating code, symbols, or relationships.
 
-1. Check the repository root for a `.codegraph` directory.
-2. If `.codegraph` does not exist, run the following command from the repository root:
-
-```powershell
-codegraph init .
-```
+Prefer the CodeGraph MCP tool when available; otherwise use `codegraph explore`. If the directory is absent, skip CodeGraph. Do not initialize it unless the user asks.

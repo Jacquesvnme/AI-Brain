@@ -1,4 +1,4 @@
-# Required project files
+# Required project file instructions
 
 This document identifies the project file sets to apply when the `required-project-files` optional rule is active.
 

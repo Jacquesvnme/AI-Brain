@@ -62,7 +62,7 @@ Do not load every detailed file for every task. The purpose of this index is to 
 
 ## Related skills
 
-Skills are catalogued separately from project conventions at `{project-path}\skills\skills.md`. Follow a linked skill when it matches the task, but keep the applicable conventions in this directory as the definition of the desired project result.
+Skill selection is routed separately through `{project-path}\skills\skills.md`. Follow a linked skill only when it matches the task, while treating the applicable conventions in this directory as the definition of the desired project result.
 
 For an explicit review of changes since a fixed Git reference, read `{project-path}\skills\external\code-review.md`. For module interfaces, seams, testability, or architectural restructuring, read `{project-path}\skills\external\codebase-design.md` and, when the task is specifically an architecture improvement, `{project-path}\skills\external\improve-codebase-architecture.md`.
 

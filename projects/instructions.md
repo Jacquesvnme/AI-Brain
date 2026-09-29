@@ -6,6 +6,8 @@ The directories beside this file contain context for individual projects. Projec
 
 Read only the directory that matches the project currently being discussed or modified. Do not load unrelated project context merely because it is available.
 
+Within the matching directory, open only the files whose subjects affect the current task. Do not load the entire project directory by default.
+
 Project-specific context supplements the shared AI Brain rules. An explicit project-specific decision takes precedence over a shared preference when both apply to the same concern. Required shared rules continue to apply unless a higher-priority instruction explicitly overrides them.
 
 ## Applying project context

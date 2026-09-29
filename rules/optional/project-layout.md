@@ -7,4 +7,4 @@
 
 Apply this optional rule only when creating a new project or when the user explicitly requests that an existing project be restructured.
 
-Read the central instructions file first. It explains how to select and apply a layout and links to the individual layout instructions. Select exactly one layout based on the requested project type. Do not combine layouts unless the user explicitly requests a custom structure.
+Read the central file, select the one layout matching the requested solution type, and open only that layout's instructions. Do not combine layouts unless the user requests a custom structure.
