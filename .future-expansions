@@ -1,0 +1,21 @@
+Ten expansion ideas
+1. Architecture decisions
+   Add lightweight architecture decision records for important choices, alternatives, and consequences. This prevents future agents from reversing deliberate decisions.
+2. Testing conventions
+   Define preferences for unit, integration, API, UI, and end-to-end testing, including naming, fixtures, mocking, test data, and acceptable coverage.
+3. Security conventions
+   Cover authentication, authorization, secrets, sensitive logging, dependency risk, input validation, threat modelling, and secure defaults.
+4. Data and persistence
+   Document database selection, migrations, transactions, entity boundaries, retention, backups, caching, and concurrency preferences.
+5. Observability
+   Define logging structure, log levels, metrics, traces, correlation identifiers, health checks, and what must never be logged.
+6. API contract design
+   Add shared guidance for versioning, DTO compatibility, pagination, filtering, status codes, idempotency, and breaking-change management. This would complement project-specific pathing.md.
+7. Delivery and releases
+   Cover CI checks, deployment environments, versioning, changelogs, release notes, rollback expectations, and publishing workflows.
+8. Performance principles
+   Record expectations for measurement, profiling, caching, database queries, allocation, asynchronous work, startup time, and performance budgets.
+9. Accessibility and product content
+   Separate accessibility, interface copy, terminology, empty states, validation messages, and content tone from visual front-end design.
+10. AI Brain maintenance
+   Add automated checks for broken references, oversized descriptors, orphaned instruction indexes, duplicated routes, empty documentation, naming inconsistencies, and excessive routing depth.
