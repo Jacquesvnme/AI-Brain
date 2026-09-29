@@ -26,6 +26,7 @@ Required rules apply to every project and task.
 
 - **codegraph.md:** `{project-path}\rules\required\codegraph.md`
 - **project-conventions.md:** `{project-path}\rules\required\project-conventions.md`
+- **project-upkeep.md:** `{project-path}\rules\required\project-upkeep.md`
 
 ## Optional rules
 
