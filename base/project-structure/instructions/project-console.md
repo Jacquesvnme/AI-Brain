@@ -12,7 +12,16 @@ PROJECT_NAME.Console/
 │   └── Application.cs
 ├── Data/
 ├── Extensions/
+├── Handlers/
+│   └── Feature/
+│       └── ActionFeatureHandler.cs
+├── Validators/
+│   └── Feature/
+│       └── ActionFeatureValidator.cs
 ├── Services/
+├── Properties/
+│   └── launchSettings.json
+├── Utils/
 ├── DependencyInjection.cs
 ├── Program.cs
 ├── appsettings.json
@@ -37,9 +46,33 @@ The `Data` directory contains data files used by the console application, includ
 
 The `Extensions` directory contains static extension methods that extend the console application's foundational functionality.
 
+### Handlers
+
+The `Handlers` directory contains console application operation handlers, grouped by feature or responsibility. A handler represents a specific operation or piece of functionality coordinated by the console application.
+
+Name handlers by combining the operation, the subject, and the `Handler` suffix, such as `ImportModsHandler.cs`. Keep related handlers together in a feature directory such as `Handlers/Mods`.
+
+### Validators
+
+The `Validators` directory contains reusable or non-trivial validation for console input, command options, configuration values, or operation requests. Group validators by the same feature or responsibility used under `Handlers`.
+
+Name a validator for the operation or input it validates and add the `Validator` suffix, such as `ImportModsValidator.cs` or `ImportModsRequestValidator.cs`. Use one naming approach consistently within the project.
+
+Validators check input shape, required values, ranges, formats, and relationships among supplied values. Database state, authorization decisions, and business invariants remain handler or domain responsibilities unless the project deliberately defines another validation boundary.
+
+Only add the directory when validation benefits from extraction. Small checks may remain near the console input flow when a separate type would make the operation harder to follow.
+
 ### Services
 
 The `Services` directory contains dependency-injected classes that provide a specific, clearly defined set of functionality to the application.
+
+### Properties
+
+The `Properties` directory contains generated or environment-specific launch configuration such as `launchSettings.json`.
+
+### Utils
+
+The `Utils` directory contains small Console-specific utilities that do not belong to the application coordinator, a handler, a validator, a service, or another project. Group or split utilities further when needed to keep their responsibilities clear.
 
 ## Root files
 
