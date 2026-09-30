@@ -7,4 +7,4 @@
 
 Apply this optional rule when creating or changing the internal structure of a project, or when reviewing whether an existing project follows its defined structure.
 
-Read the central file, then open only the structure instructions for the project types present in the solution or directly affected by the task.
+The central file routes to structure instructions for each supported project type.

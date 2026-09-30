@@ -4,7 +4,7 @@ This directory is the central catalogue for reusable agent workflows used with t
 
 The catalogue documents when a skill applies, how it relates to other guidance, and where it came from. These files do not replace an installed skill's `SKILL.md`. When a skill is available, read and follow its active `SKILL.md` before using it because the installed workflow may change independently of this catalogue.
 
-Use this file as a router. Choose the smallest set of skills that matches the task and open only those catalogue entries. Do not load every custom or external skill document.
+Use this file as the catalogue router.
 
 ## Directory structure
 
@@ -33,7 +33,7 @@ Use this file as a router. Choose the smallest set of skills that matches the ta
 
 ## Selection and invocation
 
-Use a skill when the user explicitly names it or when its documented trigger clearly matches the task. Use the smallest set that covers the work and explain briefly why each selected skill applies.
+Use a skill when the user explicitly names it or when its documented trigger clearly matches the task. Explain briefly why each selected skill applies.
 
 The most portable invocation is a direct request such as `Use the frontend-design skill to redesign this page.` Where supported, `$skill-name`, `/skill-name`, or a dedicated skill tool may also be used. The user's request, repository instructions, and authorization boundaries take precedence over skill guidance.
 

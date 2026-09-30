@@ -4,6 +4,8 @@ AI Brain is a personal, C#-focused knowledge base for decisions, conventions, re
 
 Its documentation uses progressive disclosure to control context and token usage:
 
+The required progressive-disclosure rule is defined at `{project-path}\rules\required\progressive-disclosure.md`.
+
 1. `ai-brain.md` is the top-level routing index.
 2. Compact descriptors explain when a rule or section applies.
 3. A selected section's `instructions.md` routes to relevant detailed files.

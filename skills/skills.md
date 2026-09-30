@@ -7,4 +7,4 @@
 
 Read the detailed skills instructions only when the user names a skill, an available skill clearly matches the task, or the task involves discovering, installing, creating, or documenting skills.
 
-The detailed file routes to custom and external skill guidance. Select the smallest applicable set; do not load every skill document.
+The detailed file routes to custom and external skill guidance.

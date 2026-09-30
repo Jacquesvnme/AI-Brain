@@ -24,13 +24,10 @@ An explicit user requirement and an established project-specific convention take
 
 1. Identify which implementation concerns the task creates or changes.
 2. Read the central instructions in this file.
-3. Read only the detailed convention files that match those concerns.
-4. Inspect the existing project for established local patterns before applying a preference.
-5. Apply required conventions and use preferred conventions as defaults.
-6. Resolve conflicts in this order: explicit user direction, project-specific instructions, established intentional project patterns, then shared AI Brain preferences.
-7. Verify the result using the tests, builds, visual review, or documentation checks appropriate to the work.
-
-Do not load every detailed file for every task. The purpose of this index is to route work to the smallest relevant instruction set.
+3. Inspect the existing project for established local patterns before applying a preference.
+4. Apply required conventions and use preferred conventions as defaults.
+5. Resolve conflicts in this order: explicit user direction, project-specific instructions, established intentional project patterns, then shared AI Brain preferences.
+6. Verify the result using the tests, builds, visual review, or documentation checks appropriate to the work.
 
 ## General conventions
 

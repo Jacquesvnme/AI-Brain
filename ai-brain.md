@@ -2,7 +2,7 @@
 
 The AI Brain is the central routing index for rules, instructions, skills, and project context.
 
-Read every required rule. Review the compact optional-rule, skill, and project-context descriptors, then follow only the paths whose descriptions match the current task. Do not recursively load every referenced file.
+Read every required rule.
 
 ## Variables
 
@@ -25,13 +25,14 @@ If the repository moves, update this value and any standalone bootstrap referenc
 Required rules apply to every project and task.
 
 - **codegraph.md:** `{project-path}\rules\required\codegraph.md`
+- **progressive-disclosure.md:** `{project-path}\rules\required\progressive-disclosure.md`
 - **read-only-content.md:** `{project-path}\rules\required\read-only-content.md`
 - **project-conventions.md:** `{project-path}\rules\required\project-conventions.md`
 - **project-upkeep.md:** `{project-path}\rules\required\project-upkeep.md`
 
 ## Optional rules
 
-Optional rules apply only when their descriptions match the current task or the user explicitly requests them. Read the descriptors to decide; follow only matching references.
+Optional rules apply only when their descriptions match the current task or the user explicitly requests them.
 
 - **project-creation.md:** `{project-path}\rules\optional\project-creation.md`
 - **project-layout.md:** `{project-path}\rules\optional\project-layout.md`

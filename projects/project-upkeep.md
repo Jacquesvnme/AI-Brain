@@ -1,8 +1,8 @@
 # Project upkeep
 
-Use these instructions only when the current repository or product has a matching directory under `{project-path}\projects`. Do not read or update another project's context.
+Use these instructions only when the current repository or product has a matching directory under `{project-path}\projects`.
 
-Before relevant work, read `{project-path}\projects\instructions.md` and only the matching project files needed for the task. After the work, update a project-context file only when the completed change materially alters facts that file is responsible for. Keep entries concise, factual, and current; do not add speculative plans or rewrite unchanged documentation.
+Before relevant work, read `{project-path}\projects\instructions.md`. After the work, update a project-context file only when the completed change materially alters facts that file is responsible for. Keep entries concise, factual, and current; do not add speculative plans or rewrite unchanged documentation.
 
 ## File responsibilities
 
@@ -13,7 +13,7 @@ Before relevant work, read `{project-path}\projects\instructions.md` and only th
 - **pathing.md:** Document controller routes and the front-end-to-back-end path through those controllers. Update when endpoints, route ownership, or integration paths change.
 - **themes-and-colors.md:** Keep a short description of the theme choice, palette, semantic color roles, and overall visual treatment. Update only when the established theme changes.
 - **documentation/main.md:** Treat this as the project's documentation entry point. Keep its overview and links current whenever project documentation changes.
-- **documentation/subdocs/*.md:** Create focused subdocuments as needed for material that would make `main.md` too broad or expensive to load. Link each subdocument from `main.md`, update it when its subject changes, and do not create empty placeholders.
+- **documentation/subdocs/*.md:** Create focused subdocuments as needed for material that would make `main.md` too broad. Link each subdocument from `main.md`, update it when its subject changes, and do not create empty placeholders.
 - **other-notes.md:** Do not update unless the user explicitly asks.
 
 ## Upkeep boundaries

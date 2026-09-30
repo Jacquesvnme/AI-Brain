@@ -28,12 +28,11 @@ For example, if the application is named `SuperDummyApplication`, `PROJECT_NAME.
 ## Applying the instructions
 
 1. Identify the projects that are present in the solution or included in the current task.
-2. Read only the individual project-structure instructions that match those projects.
-3. Replace every `PROJECT_NAME` placeholder with the actual project name.
-4. Use each documented tree as the default internal layout for that project.
-5. Place files according to the documented directory responsibilities and naming conventions.
-6. Apply explicit project-specific or user-provided requirements when they differ from a default structure.
-7. When an individual instruction states that no opinion has been defined, use reasonable conventions appropriate to that project's responsibilities without treating them as an AI Brain standard.
+2. Replace every `PROJECT_NAME` placeholder with the actual project name.
+3. Use each documented tree as the default internal layout for that project.
+4. Place files according to the documented directory responsibilities and naming conventions.
+5. Apply explicit project-specific or user-provided requirements when they differ from a default structure.
+6. When an individual instruction states that no opinion has been defined, use reasonable conventions appropriate to that project's responsibilities without treating them as an AI Brain standard.
 
 When reviewing an existing project, compare only the applicable project-structure instructions against that project. Do not restructure unrelated projects, and do not modify an existing structure unless the task includes creating, restructuring, or correcting it.
 

@@ -16,11 +16,11 @@ Always read and apply the all-project file set:
 
 - **All projects:** `{project-path}\base\project-files\all\instructions.md`
 
-Then identify the project types present and read only the matching project-specific file sets:
+Then identify the project types present and apply the matching project-specific file sets:
 
 - **C# projects:** `{project-path}\base\project-files\csharp\instructions.md`
 
-Apply every instruction in each selected file set. Do not read or apply a project-specific file set when its project type is not present.
+Apply every instruction in each selected file set.
 
 ## Important notice
 
