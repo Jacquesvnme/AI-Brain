@@ -1,4 +1,5 @@
-Ten expansion ideas
+# Ten expansion ideas
+
 1. Architecture decisions
    Add lightweight architecture decision records for important choices, alternatives, and consequences. This prevents future agents from reversing deliberate decisions.
 2. Testing conventions
@@ -19,3 +20,6 @@ Ten expansion ideas
    Separate accessibility, interface copy, terminology, empty states, validation messages, and content tone from visual front-end design.
 10. AI Brain maintenance
    Add automated checks for broken references, oversized descriptors, orphaned instruction indexes, duplicated routes, empty documentation, naming inconsistencies, and excessive routing depth.
+
+## Next
+1. Add git initialize instructions.
