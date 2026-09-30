@@ -12,6 +12,10 @@ The `project-path` variable is the absolute path to the AI Brain repository. In 
 
 If the repository moves, update this value and any standalone bootstrap reference that must locate `ai-brain.md` before the variable is available.
 
+## Rules
+
+- **instructions.md:** `{project-path}\rules\instructions.md`
+
 ## Project context
 
 - **projects.md:** `{project-path}\projects\projects.md`
@@ -19,23 +23,3 @@ If the repository moves, update this value and any standalone bootstrap referenc
 ## Skills
 
 - **skills.md:** `{project-path}\skills\skills.md`
-
-## Required rules
-
-Required rules apply to every project and task.
-
-- **codegraph.md:** `{project-path}\rules\required\codegraph.md`
-- **progressive-disclosure.md:** `{project-path}\rules\required\progressive-disclosure.md`
-- **read-only-content.md:** `{project-path}\rules\required\read-only-content.md`
-- **project-conventions.md:** `{project-path}\rules\required\project-conventions.md`
-- **project-upkeep.md:** `{project-path}\rules\required\project-upkeep.md`
-
-## Optional rules
-
-Optional rules apply only when their descriptions match the current task or the user explicitly requests them.
-
-- **project-creation.md:** `{project-path}\rules\optional\project-creation.md`
-- **project-layout.md:** `{project-path}\rules\optional\project-layout.md`
-- **project-structure.md:** `{project-path}\rules\optional\project-structure.md`
-- **required-project-files.md:** `{project-path}\rules\optional\required-project-files.md`
-- **visualize-ui.md:** `{project-path}\rules\optional\visualize-ui.md`
