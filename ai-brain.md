@@ -25,6 +25,7 @@ If the repository moves, update this value and any standalone bootstrap referenc
 Required rules apply to every project and task.
 
 - **codegraph.md:** `{project-path}\rules\required\codegraph.md`
+- **read-only-content.md:** `{project-path}\rules\required\read-only-content.md`
 - **project-conventions.md:** `{project-path}\rules\required\project-conventions.md`
 - **project-upkeep.md:** `{project-path}\rules\required\project-upkeep.md`
 
