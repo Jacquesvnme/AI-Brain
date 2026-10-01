@@ -4,15 +4,23 @@ The directories beside this file contain context for individual projects. Projec
 
 ## Applicability
 
-Use the directory that matches the project currently being discussed or modified.
+Identify the project currently being discussed or modified and look for its matching directory under `{project-path}\projects`. When a matching directory exists, use it as the project's context source.
 
 Project-specific context supplements the shared AI Brain rules. An explicit project-specific decision takes precedence over a shared preference when both apply to the same concern. Required shared rules continue to apply unless a higher-priority instruction explicitly overrides them.
+
+## Project upkeep
+
+When project-context upkeep applies, read and follow:
+
+`{project-path}\projects\project-upkeep.md`
+
+That file defines the upkeep mechanics and the responsibility of each project-context file.
 
 ## Applying project context
 
 1. Identify the current project by repository and product name.
-2. Open the matching directory under `{project-path}\projects`.
+2. Look for its matching directory under `{project-path}\projects` and read only the context files relevant to the current work.
 3. Treat project files as context, not as permission to modify the referenced repository.
 4. Keep project-specific details out of shared rules unless the user explicitly promotes them to a reusable convention.
 
-When no matching directory exists, rely on the current repository, the user's request, and the applicable shared rules. Do not infer that another project's decisions apply.
+When no matching directory exists, do not infer that another project's decisions apply.

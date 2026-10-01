@@ -5,3 +5,7 @@ Before making changes to this project, read and follow all applicable rules defi
 `C:\~ My Files\AI-Brain\ai-brain.md`
 
 Required rules always apply. Optional rules apply only when their description matches the current work or when the user explicitly requests them.
+
+## Rules
+
+- **Documentation Mode:** `enabled`

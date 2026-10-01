@@ -15,6 +15,7 @@ Use this file as the catalogue router.
 
 ## Custom workflows
 
+- **documentation-mode.md:** Use the current project's local setting to control required project-context upkeep. `{project-path}\skills\custom\documentation-mode.md`
 - **visualize-ui.md:** Produce a rendered UI concept for critique and approval. `{project-path}\skills\custom\visualize-ui.md`
 
 ## External skill catalogue

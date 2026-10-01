@@ -1,8 +1,16 @@
 # Project upkeep
 
-Use these instructions only when the current repository or product has a matching directory under `{project-path}\projects`.
+These instructions define how to create and maintain project context under `{project-path}\projects`.
 
-Before relevant work, read `{project-path}\projects\instructions.md`. After the work, update a project-context file only when the completed change materially alters facts that file is responsible for. Keep entries concise, factual, and current; do not add speculative plans or rewrite unchanged documentation.
+After the work, update a project-context file only when the completed change materially alters facts that file is responsible for. Keep entries concise, factual, and current; do not add speculative plans or rewrite unchanged documentation.
+
+## Project directory selection and creation
+
+Derive the context-directory name from the established repository or product name. Convert the name to lowercase and replace each run of spaces with a hyphen. For example, `My Project` becomes `my-project`.
+
+Use an existing matching directory instead of creating a differently named duplicate. If no matching directory exists and material project facts need to be recorded, the agent is authorized to create `{project-path}\projects\PROJECT-NAME` using the normalized name. This authorization is limited to context for the current project.
+
+Create only the context files needed to record verified facts under the responsibilities below. Do not create empty placeholder files, copy another project's context, or invent details merely to populate a new directory.
 
 ## File responsibilities
 

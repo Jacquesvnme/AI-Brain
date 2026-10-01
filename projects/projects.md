@@ -5,6 +5,6 @@
 **absolute-directory:** `{project-path}\projects`
 **section-description:**
 
-Apply project context when the current repository or product has a matching directory under `projects`.
+Apply project context when a current repository or product can be identified.
 
-The detailed instructions define how project context is selected and applied.
+The detailed instructions define how project context is selected and route to the project-upkeep instructions.
