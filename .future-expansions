@@ -22,4 +22,4 @@
    Add automated checks for broken references, oversized descriptors, orphaned instruction indexes, duplicated routes, empty documentation, naming inconsistencies, and excessive routing depth.
 
 ## Next
-1. Add git initialize instructions.
+1. ~~Add git initialize instructions.~~

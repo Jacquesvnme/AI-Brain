@@ -2,7 +2,7 @@
 
 This file defines the standard files required for every project type.
 
-Apply every section in this file. Copy each referenced template to the destination specified by its section and complete any project-specific placeholders before finishing.
+Apply every section in this file. Initialize Git as instructed, copy each referenced template to the destination specified by its section, and complete any project-specific placeholders before finishing.
 
 These instructions complement project creation and project layout. Apply them to the outer solution directory after its initial layout exists, without overwriting populated generated files unless the relevant section explicitly requires replacement.
 
@@ -18,6 +18,27 @@ These instructions complement project creation and project layout. Apply them to
 - **Creation.md:** `{project-path}\base\project-files\all\templates\Creation.md`
 - **LICENSE:** `{project-path}\base\project-files\all\templates\LICENSE`
 - **README.md:** `{project-path}\base\project-files\all\templates\README.md`
+
+## Git repository initialization
+
+Every new project must have a Git repository initialized in the topmost directory of the current project. For the standard layouts, this is the outer solution directory that contains the solution and inner source directory. The repository metadata is a required part of the project baseline even though it is not created from a template.
+
+After the topmost project directory exists, run the following command from that directory:
+
+```powershell
+git init
+```
+
+Git may be initialized at any point after the topmost project directory exists. Do not initialize Git in an inner source directory or component-project directory. Do not stage or commit the baseline while project creation or required-file work remains unfinished.
+
+After all initial project creation, required files, configuration, dependency setup, and verification are complete, review the resulting project state. When satisfied that the baseline is finished, run the following commands from the topmost project directory:
+
+```powershell
+git add .
+git commit -m "Initial commit"
+```
+
+Create this initial commit only once, as the final step of establishing the new project's baseline. If the target directory is already part of a Git repository or has existing Git history, preserve that repository and history; do not reinitialize it or create another `Initial commit` under this instruction.
 
 ## AGENTS.md
 
@@ -86,8 +107,10 @@ Remove the double-braced instructional placeholder. Do not add a project descrip
 ## Applying the instructions
 
 1. Confirm the outer solution directory and actual project name.
-2. Read the template navigation and every file section in this document.
-3. Copy each template to its documented destination.
-4. Replace or remove every documented placeholder without changing fixed template content.
-5. Preserve generated or already populated files when the applicable project-creation instructions say to update them instead of overwriting them.
-6. Verify that every required file exists at the outer solution level with the correct filename and project-specific values.
+2. For a new project that is not already in a Git repository, initialize Git in the topmost project directory. Do not initialize a nested source or component-project directory.
+3. Read the template navigation and every file section in this document.
+4. Copy each template to its documented destination.
+5. Replace or remove every documented placeholder without changing fixed template content.
+6. Preserve generated or already populated files when the applicable project-creation instructions say to update them instead of overwriting them.
+7. Verify that every required file exists at the outer solution level with the correct filename and project-specific values.
+8. After the entire initial project baseline is complete and verified, stage it and create the one-time `Initial commit` as instructed in the Git repository initialization section.
