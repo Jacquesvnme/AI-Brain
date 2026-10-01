@@ -29,6 +29,14 @@
 
 This is a file for future planning. Please ignore.
 
+### Database and infrastructure conventions
+
+Add further required project-convention sections and files oriented toward databases and Infrastructure. Cover the recurring persistence decisions that are not yet fully captured, including database selection, schema and migration practices, relationships, transactions, querying, concurrency, retention, backups, caching, and the boundary between code-owned behavior and database-enforced behavior.
+
+### Front-end functionality conventions
+
+Add further required project-convention sections and files for preferred recurring front-end functionality, separate from visual design and theme guidance. Capture reusable interaction and navigation behaviors—such as when to include a scroll-to-top button—along with their expected triggers, placement, accessibility, responsive behavior, and state handling.
+
 base/
 └── project-conventions/
     ├── instructions.md
