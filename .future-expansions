@@ -63,3 +63,37 @@ base/
 
 - Add sqlite
 - Restful api reference + kebab
+- add meta data rules
+- add application favicon/icon rules
+- add svg icon rules
+- fix the numbering syntax on creation.md
+- add descriptions for database locations & appsettings.json
+- fix the project startup for react application with ui
+   - Npm run dev with .api proj is seperated and not binded together
+- Mandatory /status endpoints for any and all api's with a unique frontend design
+- Basic data validations
+ - Bool, int, string,
+ - Phone numbers, emails, ids
+- Use shadcn ui library on frontend
+- Better documentation for
+   - pathing
+   - theme and colors
+   - no documentation
+- talk a bit about mobile reactiveness
+-  usefull ui features
+   - menu button
+   - small useful totals
+   - sorting and filtering
+- add serilogger to api + react projects
+- better error handling on frontend
+- catering for empty state on frontend
+- talk more about appsettings.json and database connection string location
+- If project is not required like identity then remove
+- Describe more details on the Program.cs to ApiHost.cs
+- Describe dependency injection
+- Look into describing launch settings.json
+- add more information about error logging
+  - private readonly ILogger<EditUserHandler> _logger = logger;
+- Add database can connect tests
+- Database context factory & path is unused and created
+- did not initialize code graph
