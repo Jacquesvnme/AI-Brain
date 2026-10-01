@@ -1,4 +1,4 @@
-# Ten expansion ideas
+# Generic future expansions
 
 1. Architecture decisions
    Add lightweight architecture decision records for important choices, alternatives, and consequences. This prevents future agents from reversing deliberate decisions.
@@ -21,5 +21,32 @@
 10. AI Brain maintenance
    Add automated checks for broken references, oversized descriptors, orphaned instruction indexes, duplicated routes, empty documentation, naming inconsistencies, and excessive routing depth.
 
-## Next
-1. ~~Add git initialize instructions.~~
+## Completed
+1. Add git initialize instructions.
+2. Documentation mode and discriptions for better project controll.
+
+## Project Conventions future expansions
+
+This is a file for future planning. Please ignore.
+
+base/
+└── project-conventions/
+    ├── instructions.md
+    └── instructions/
+        ├── design-principles.md
+        ├── naming.md
+        ├── classes-and-methods.md
+        ├── controllers.md
+        ├── handlers.md
+        ├── models-and-contracts.md
+        ├── validation.md
+        ├── errors-and-results.md
+        ├── dependencies-and-boundaries.md
+        ├── async-and-cancellation.md
+        ├── data-access-and-transactions.md
+        ├── configuration.md
+        ├── logging-and-observability.md
+        ├── comments-and-documentation.md
+        ├── testing.md
+        ├── security.md
+        └── performance.md
