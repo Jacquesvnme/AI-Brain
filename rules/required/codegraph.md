@@ -6,7 +6,7 @@
 
 Use CodeGraph as the primary method for locating and understanding code.
 
-Apply this rule only when the repository root contains a `.codegraph` directory. Use CodeGraph before grep, file search, or broad source reading when locating code, symbols, or relationships.
+Use CodeGraph before grep, file search, or broad source reading when locating code, symbols, or relationships.
 
 Prefer the CodeGraph MCP tool when available; otherwise use `codegraph explore`.
 
