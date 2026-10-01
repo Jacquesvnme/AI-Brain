@@ -58,3 +58,8 @@ base/
         ├── testing.md
         ├── security.md
         └── performance.md
+
+### Others
+
+- Add sqlite
+- Restful api reference + kebab
