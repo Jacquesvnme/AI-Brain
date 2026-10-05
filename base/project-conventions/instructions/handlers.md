@@ -47,16 +47,18 @@ Use a primary constructor for injected dependencies. Database contexts, loggers,
 /// Retrieves the current service status.
 /// </summary>
 public sealed class GetStatusHandler(
-    Context database,
+    IDbContextFactory<Context> contextFactory,
     ILogger<GetStatusHandler> logger)
     : IRequestHandler<GetStatusQuery, GetStatusResponse>
 {
-    private readonly Context _database = database;
+    private readonly IDbContextFactory<Context> _contextFactory = contextFactory;
     private readonly ILogger<GetStatusHandler> _logger = logger;
 }
 ```
 
 Inject only dependencies used by the handler. Do not resolve services manually inside `Handle`.
+
+Database handlers inject `IDbContextFactory<Context>` and create an independently disposable context for each operation. Do not inject a long-lived `Context` directly into a handler. Follow `{project-path}\base\project-conventions\instructions\infrastructure\database.md` for the required creation, cancellation, and disposal pattern.
 
 ## The Handle method
 

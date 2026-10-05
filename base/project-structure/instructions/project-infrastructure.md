@@ -11,6 +11,7 @@ PROJECT_NAME.Infrastructure/
 ├── Database/
 │   ├── Context.cs
 │   ├── ContextFactory.cs
+│   ├── DatabaseConnection.cs
 │   └── DatabasePath.cs
 ├── Entities/
 │   └── ExampleEntity.cs
@@ -33,6 +34,7 @@ The `Database` directory contains the foundational classes required to configure
 
 - `Context.cs` defines the Entity Framework database context and its entity sets.
 - `ContextFactory.cs` creates the context for design-time Entity Framework tooling.
+- `DatabaseConnection.cs` performs the one-time startup database connection test and returns its success state and safe message.
 - `DatabasePath.cs` resolves and validates the configured database-file location.
 
 Adapt these files when the selected database technology requires different setup, while retaining the responsibility of the directory.
@@ -55,7 +57,7 @@ The `Seeding` directory contains baseline data population. `SeedingData.cs` owns
 
 ### DependencyInjection.cs
 
-`DependencyInjection.cs` registers database configuration, context factories, migration, seeding, and other Infrastructure dependencies. The consuming executable host calls these extensions from its composition root.
+`DependencyInjection.cs` registers database configuration, context factories, `DatabaseConnection`, migration, seeding, and other Infrastructure dependencies. It also exposes the startup extension that runs the connection test and stops startup when the result is unsuccessful. The consuming executable host calls these extensions from its composition root.
 
 ### EntityBase.cs
 

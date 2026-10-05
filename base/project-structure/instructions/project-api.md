@@ -9,12 +9,15 @@ Replace `PROJECT_NAME` with the actual project name throughout the structure.
 ```text
 PROJECT_NAME.Api/
 ├── Controllers/
-│   └── FeatureController.cs
+│   ├── FeatureController.cs
+│   └── StatusController.cs
 ├── DependencyInjection/
 │   └── DependencyInjection.cs
 ├── Handlers/
-│   └── Feature/
-│       └── ActionFeatureHandler.cs
+│   ├── Feature/
+│   │   └── ActionFeatureHandler.cs
+│   └── Status/
+│       └── GetStatusHandler.cs
 ├── Validators/
 │   └── Feature/
 │       └── ActionFeatureValidator.cs
@@ -38,6 +41,8 @@ The `Controllers` directory contains the API controllers. Organize controllers b
 
 Each controller should have a corresponding feature directory under `Handlers` when it uses handlers. For example, handlers used by `ModsController.cs` belong in `Handlers/Mods`.
 
+Every API includes `StatusController.cs` and its unauthenticated `GET /status` endpoint. Its handler belongs at `Handlers/Status/GetStatusHandler.cs`. Apply the endpoint contract in `{project-path}\base\project-conventions\instructions\api\controllers.md`.
+
 ### Handlers
 
 The `Handlers` directory contains API operation handlers, grouped into directories that correspond to their controller or feature. A handler represents a specific operation or piece of functionality.
@@ -45,6 +50,8 @@ The `Handlers` directory contains API operation handlers, grouped into directori
 Name handlers by combining the operation, the subject, and the `Handler` suffix. For example, the handler that adds a mod is named `AddModHandler.cs`.
 
 The `Handlers` directory and this naming convention are specific to the API project's application handlers. Other projects should not introduce an equivalent handler structure unless their own project-structure instructions define one.
+
+When a handler accesses the database, it creates its own context through the registered context factory according to `{project-path}\base\project-conventions\instructions\infrastructure\database.md`.
 
 ### Validators
 

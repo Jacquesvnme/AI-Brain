@@ -38,7 +38,7 @@ An explicit user requirement and an established project-specific convention take
 
 ## API conventions
 
-- **controllers.md:** Read when creating or changing API controllers. `{project-path}\base\project-conventions\instructions\api\controllers.md`
+- **controllers.md:** Read when creating or changing API controllers and when implementing the required `GET /status` endpoint. `{project-path}\base\project-conventions\instructions\api\controllers.md`
 - **observability.md:** Read when creating the API for a React Web API solution or when configuring API logging, console output, request logging, or Serilog. `{project-path}\base\project-conventions\instructions\api\observability.md`
 - **validators.md:** Read when creating or changing API input validators or controller validation flow. `{project-path}\base\project-conventions\instructions\api\validators.md`
 
@@ -57,7 +57,7 @@ An explicit user requirement and an established project-specific convention take
 
 ## UI conventions
 
-- **application-experience.md:** Read when creating or changing a visible application UI, application shell, metadata, page titles, favicon, navigation affordances, theme controls, collection tools, or developer information. `{project-path}\base\project-conventions\instructions\ui\application-experience.md`
+- **application-experience.md:** Read when creating or changing a visible application UI, application shell, metadata, page titles, favicon, empty and error states, service status, navigation affordances, theme controls, collection tools, or developer information. `{project-path}\base\project-conventions\instructions\ui\application-experience.md`
 - **front-end-design.md:** Read for any task that creates or materially changes a user interface. `{project-path}\base\project-conventions\instructions\ui\front-end-design.md`
 - **theme.md:** Read when defining or changing colors, theme tokens, geometry, elevation, glass, glow, dark mode, or light mode. `{project-path}\base\project-conventions\instructions\ui\theme.md`
 
