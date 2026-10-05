@@ -32,6 +32,22 @@ try {
     Set-Location ..
 }
 
+$ApiProjectPath = "${ProjectName}/${ProjectName}.Api/${ProjectName}.Api.csproj"
+$ApiPackages = @(
+    "Serilog.AspNetCore"
+    "Serilog.Sinks.Console"
+)
+
+foreach ($ApiPackage in $ApiPackages) {
+    dotnet add $ApiProjectPath package $ApiPackage
+
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "✓ Added $ApiPackage to ${ProjectName}.Api" -ForegroundColor Green
+    } else {
+        throw "Failed to add $ApiPackage to ${ProjectName}.Api"
+    }
+}
+
 dotnet new classlib --name "${ProjectName}.Domain" --output "${ProjectName}/${ProjectName}.Domain" --framework $Framework
 if ($LASTEXITCODE -eq 0) {
     Write-Host "✓ Created ${ProjectName}.Domain" -ForegroundColor Green

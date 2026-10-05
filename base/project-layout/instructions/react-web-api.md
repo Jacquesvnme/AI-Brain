@@ -57,3 +57,11 @@ Read and apply each of these project creation instruction files for this layout:
 Use this script to create a new React Web API solution with its SLNX, UI, API, Domain, Identity, Infrastructure, and Test projects, perform the required generated-project renaming, and register all component projects in the solution:
 
 - **create-react-web-api.ps1:** `{project-path}\base\project-creation\scripts\create-react-web-api.ps1`
+
+## Required API observability
+
+Apply the Serilog and console-logging requirements in:
+
+- **observability.md:** `{project-path}\base\project-conventions\instructions\api\observability.md`
+
+This requirement is specific to the React Web API layout. Do not infer that it applies to the React Web API with Desktop layout.
