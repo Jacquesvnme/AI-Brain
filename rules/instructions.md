@@ -11,6 +11,7 @@ Required rules apply to every project and task. Read every required rule.
 - **progressive-disclosure.md:** `{project-path}\rules\required\progressive-disclosure.md`
 - **read-only-content.md:** `{project-path}\rules\required\read-only-content.md`
 - **project-conventions.md:** `{project-path}\rules\required\project-conventions.md`
+- **implementation-scope.md:** `{project-path}\rules\required\implementation-scope.md`
 - **project-upkeep.md:** `{project-path}\rules\required\project-upkeep.md`
 
 ## Optional rules
