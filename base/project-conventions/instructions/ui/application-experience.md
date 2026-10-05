@@ -97,7 +97,13 @@ The control is a compact button-like block containing a status dot followed by a
 - **Live:** green dot and the text `Live` after `/status` returns `200 OK` with the expected successful response; and
 - **Unavailable:** red dot and the text `Unavailable` after a failed request, non-success status, timeout, or invalid response.
 
-Check the service automatically when the application starts. Clicking the control performs a new check: immediately enter the Checking state, call `GET /status`, and then update the control from the response. Prevent overlapping checks while one is already running.
+Check the service immediately when the application starts and automatically every 15 seconds afterward. Every automatic cycle must enter the Checking state, show the same pulse or wave loading treatment, call `GET /status`, and then update the control from the response.
+
+Clicking the control performs an immediate manual check and resets the automatic schedule. Cancel the pending timer, enter the Checking state, run the request, and schedule the next automatic check for 15 seconds later. Use a resettable one-shot timer rather than allowing independent intervals to accumulate.
+
+Prevent overlapping requests. If a check is already running, do not start another automatic check; schedule the next cycle after the active request finishes. Disable repeated activation or otherwise guard the control while it is checking. Dispose the timer and cancel in-flight work when the owning component unmounts.
+
+The control must retain its normal hover and focus feedback between checks. During every manual or automatic request, replace the idle treatment with the required Checking animation and loading semantics.
 
 The dot color is the required visual signal. The label may remain a neutral foreground color or adopt the state color when contrast remains accessible. Do not rely on color alone: retain the text label, expose the current state to assistive technology, and announce state changes through an appropriate live region. Respect reduced-motion preferences by replacing the loading animation with a non-animated Checking treatment.
 
@@ -129,7 +135,7 @@ Hover treatment should reinforce interactivity through a consistent change in su
 
 1. Apply every required feature to a visible UI.
 2. Verify loading, empty, error, and populated states for every data-driven section.
-3. Verify the service-status control against live, unavailable, malformed-response, and retry scenarios.
+3. Verify the service-status control against live, unavailable, malformed-response, manual retry, automatic 15-second polling, timer reset, and overlapping-request scenarios.
 4. Evaluate each preferred feature against the product's navigation, data, and available integrations.
 5. Include a preferred feature when it provides real utility and can be implemented completely.
 6. Omit inapplicable features rather than adding dead, empty, or misleading controls.
