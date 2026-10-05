@@ -74,6 +74,8 @@ The `Properties` directory contains generated or environment-specific launch con
 
 `ApiHost.cs` composes and configures the web application. It configures services, middleware, endpoints, API documentation, authorization, and other host-level behavior required before the API can run.
 
+When the solution contains an Infrastructure database, `ApiHost.cs` runs the Infrastructure migration and seeding initialization and then invokes its one-time `TestConnectionAsync` startup extension before accepting requests. Do not route this startup check through `GetStatusHandler`; that handler remains dedicated to `GET /status`.
+
 ### Program.cs
 
 `Program.cs` is the executable entry point. Keep it focused on starting the API host rather than placing application behavior directly in it.

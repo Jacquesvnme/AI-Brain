@@ -38,6 +38,8 @@ The `Application` directory contains `Application.cs` and any other functionalit
 
 `Application.cs` contains the primary execution flow and exposes the `Run` method. Place application coordination in this class rather than in `Program.cs`.
 
+When the Console solution contains an Infrastructure database, make the one-time Infrastructure `TestConnectionAsync` call the first database-dependent operation in `Application.Run` or `Application.RunAsync`. Stop startup when the returned result is unsuccessful, before beginning normal console work.
+
 ### Data
 
 The `Data` directory contains data files used by the console application, including text files and other application-specific data formats.

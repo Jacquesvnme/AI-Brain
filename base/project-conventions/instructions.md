@@ -52,6 +52,7 @@ An explicit user requirement and an established project-specific convention take
 
 ## Infrastructure conventions
 
+- **database.md:** Read when configuring SQLite, database paths, Entity Framework contexts or factories, startup connection testing, migrations, seeding, or handler database access. `{project-path}\base\project-conventions\instructions\infrastructure\database.md`
 - **entities.md:** Read when creating or changing persistence entities. `{project-path}\base\project-conventions\instructions\infrastructure\entities.md`
 
 ## UI conventions
