@@ -11,10 +11,10 @@ Replace `PROJECT_NAME` with the actual project name throughout the structure.
 ```text
 PROJECT_NAME.UI/
 ├── public/
-│   ├── icons/
-│   ├── favicon.ico
-│   └── application-icon.png
+│   └── favicon.svg
 ├── src/
+│   ├── assets/
+│   │   └── icons/
 │   ├── layout/
 │   ├── sections/
 │   ├── shared/
@@ -32,6 +32,7 @@ PROJECT_NAME.UI/
 │   ├── App.tsx
 │   └── main.tsx
 ├── .gitignore
+├── components.json
 ├── eslint.config.js
 ├── index.html
 ├── package.json
@@ -51,6 +52,16 @@ File names may differ when the selected framework, package manager, or build too
 
 `main.tsx` is the browser entry point and starts the front-end application. `App.tsx` is the root application component and composes the primary layout and sections.
 
+The root `index.html` is the application HTML entry document. It contains the application name, description, page-title default, favicon link, and other required document metadata defined by `{project-path}\base\project-conventions\instructions\ui\application-experience.md`.
+
+### Assets
+
+The `src/assets` directory contains authored assets that are imported by front-end source code and processed by the build tool.
+
+Store locally maintained interface and application-identity SVG files under `src/assets/icons`. Use this directory as the single source for icons rendered by React components. Organize a large icon set into focused subdirectories without scattering SVG files across feature, layout, or component directories.
+
+SVG is the required source format for interface icons. Do not add remote icon URLs or raster replacements when an SVG can represent the icon. When a target platform requires a generated raster derivative, retain the local SVG as the authoritative source.
+
 ### Layout
 
 The `layout` directory contains the main application layout or layouts. Place shared page shells and structural composition used across multiple views in this directory.
@@ -67,7 +78,7 @@ The `shared` directory contains reusable front-end functionality:
 - `data` contains reusable static or catalog data;
 - `hooks` contains reusable React hooks;
 - `lib` contains reusable non-visual logic; and
-- `ui` contains reusable visual components.
+- `ui` contains the installed and product-adapted shadcn/ui component source together with reusable visual components built on those primitives.
 
 Use these divisions to support componentization, reusability, and a modular front-end architecture.
 
@@ -83,13 +94,15 @@ Add further focused style files when their responsibilities are distinct.
 
 ## Public assets
 
-The `public` directory contains static assets such as icons, the favicon, and the application icon. Organize larger asset collections into clearly named subdirectories.
+The `public` directory contains static files that must retain stable public URLs. Add a custom `favicon.svg` for every visible application UI and reference it from `index.html`. Do not retain the framework's default favicon or placeholder branding.
 
-The root `index.html` is the application HTML entry document and must contain appropriate application metadata.
+Reusable interface icons belong under `src/assets/icons`, not `public`. Add another public asset only when it must be served without module import or build-time processing.
 
 ## Package and build configuration
 
 `package.json` defines front-end dependencies and scripts. It must provide the applicable development and production build commands, normally `npm run dev` and `npm run build` for the standard React and Vite setup.
+
+`components.json` configures the shadcn CLI and its import aliases. Point its `ui`, `lib`, `hooks`, and related aliases at the corresponding directories under `src/shared`, and keep those aliases synchronized with the TypeScript and Vite alias configuration. Preserve this file when adding or updating shadcn/ui components through the CLI.
 
 Preserve the lockfile for the selected package manager, such as `package-lock.json` for npm or `pnpm-lock.yaml` for pnpm. Use one package manager consistently within a project.
 

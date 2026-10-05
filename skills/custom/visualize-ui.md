@@ -75,8 +75,9 @@ The visualization must contain realistic content and the actual controls needed 
 
 Apply the shared conventions in:
 
-- `{project-path}\base\project-conventions\instructions\theme.md`
-- `{project-path}\base\project-conventions\instructions\front-end-design.md`
+- `{project-path}\base\project-conventions\instructions\ui\application-experience.md`
+- `{project-path}\base\project-conventions\instructions\ui\theme.md`
+- `{project-path}\base\project-conventions\instructions\ui\front-end-design.md`
 - `{project-path}\skills\external\frontend-design.md`
 
 The visual must make these decisions inspectable:

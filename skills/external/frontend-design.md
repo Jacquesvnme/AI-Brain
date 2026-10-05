@@ -39,4 +39,4 @@ npx skills add https://github.com/anthropics/skills --skill frontend-design
 
 ## Project-specific note
 
-Apply the skill together with `theme.md` and `front-end-design.md`. Do not let a generic recommendation from the skill override the requested minimal, accent-led, internally consistent design direction or an established local design system.
+Apply the skill together with `{project-path}\base\project-conventions\instructions\ui\theme.md` and `{project-path}\base\project-conventions\instructions\ui\front-end-design.md`. When the work covers an application shell or application-wide experience, also apply `{project-path}\base\project-conventions\instructions\ui\application-experience.md`. Do not let a generic recommendation from the skill override the requested minimal, accent-led, internally consistent design direction or an established local design system.

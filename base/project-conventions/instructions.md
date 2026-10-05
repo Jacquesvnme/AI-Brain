@@ -53,10 +53,11 @@ An explicit user requirement and an established project-specific convention take
 
 - **entities.md:** Read when creating or changing persistence entities. `{project-path}\base\project-conventions\instructions\infrastructure\entities.md`
 
-## Front-end conventions
+## UI conventions
 
-- **theme.md:** Read when defining or changing colors, theme tokens, geometry, elevation, glass, glow, dark mode, or light mode. `{project-path}\base\project-conventions\instructions\theme.md`
-- **front-end-design.md:** Read for any task that creates or materially changes a user interface. `{project-path}\base\project-conventions\instructions\front-end-design.md`
+- **application-experience.md:** Read when creating or changing a visible application UI, application shell, metadata, page titles, favicon, navigation affordances, theme controls, collection tools, or developer information. `{project-path}\base\project-conventions\instructions\ui\application-experience.md`
+- **front-end-design.md:** Read for any task that creates or materially changes a user interface. `{project-path}\base\project-conventions\instructions\ui\front-end-design.md`
+- **theme.md:** Read when defining or changing colors, theme tokens, geometry, elevation, glass, glow, dark mode, or light mode. `{project-path}\base\project-conventions\instructions\ui\theme.md`
 
 ## Related skills
 

@@ -8,7 +8,7 @@ Use the following references as read-only evidence of established preferences:
 
 1. **ModLedger:** `C:\~ My Files\Application-Collection\ModLedger` — primary reference for current design judgment, compact application shells, dense information, restrained neon emphasis, and consistent near-square geometry.
 2. **Portfolio:** `C:\~ My Files\Application-Collection\Portfolio` and [jacquesvanniekerk.com](https://jacquesvanniekerk.com) — reference for a more spacious composition, green-led atmosphere, ambient backgrounds, editorial hierarchy, and responsive presentation.
-3. **Game Keeper:** `C:\~ My Files\Application-Collection\AppManager` — secondary reference for dashboard composition, ShadCN-based controls, image-led cards, detail panels, and light/dark theme parity. Learn from its visual treatment, but do not copy its project structure.
+3. **Game Keeper:** `C:\~ My Files\Application-Collection\AppManager` — secondary reference for dashboard composition, shadcn/ui-based controls, image-led cards, detail panels, and light/dark theme parity. Learn from its visual treatment, but do not copy its project structure.
 
 Never edit a reference project while applying these instructions unless the user explicitly asks to modify that project. Extract principles rather than copying screens or assuming one reference is a universal template.
 
@@ -48,15 +48,23 @@ Spend visual boldness in one or two places. A luminous active state, atmospheric
 
 ## Component foundation
 
-ShadCN UI is the preferred starting point for React and compatible front ends. Use its accessible behavior, semantic token contract, and composable primitives. Treat generated components as owned source code:
+**Required:** Use shadcn/ui as the component foundation for React front ends, including the React Web API and React Desktop layouts. Start with an applicable shadcn/ui component or primitive instead of creating a custom replacement.
+
+Create a custom component only when shadcn/ui does not provide a suitable foundation or when adapting one of its primitives would make the result less accessible, maintainable, or fit for the product. Record the concrete reason in the implementation or handoff when the choice is not evident from the code. Do not bypass shadcn/ui merely to reproduce a standard button, dialog, menu, popover, form control, table, card, or navigation primitive.
+
+Use shadcn/ui's accessible behavior, semantic token contract, and composable primitives. Treat generated components as owned source code:
 
 - adapt their tokens and variants to the product;
 - remove unused variants and dependencies;
 - preserve keyboard and screen-reader behavior;
-- avoid leaving the default ShadCN appearance unchanged; and
+- avoid leaving the default shadcn/ui appearance unchanged; and
 - keep custom components compatible with the same theme and interaction language.
 
-Use Lucide or the icon system already established by the project. Keep icon weight, size, and alignment consistent. Icons should clarify actions or categories; they should not be scattered as decoration.
+**Required:** Use SVG for interface icons and store the SVG source locally under the UI project's `src/assets/icons` directory. Do not depend on remotely hosted icon files. When an icon originates from Lucide or another approved icon set, add the selected SVG asset to the local icon directory rather than introducing inconsistent icon sources throughout the component tree.
+
+Keep icon stroke or fill treatment, view boxes, sizing, and alignment consistent. Icons should clarify actions or categories; they should not be scattered as decoration. Provide accessible labels for icon-only controls and treat decorative SVGs as hidden from assistive technology.
+
+Application identity, favicon, metadata, page-title, application-shell, and common experience-feature requirements are defined in `{project-path}\base\project-conventions\instructions\ui\application-experience.md`.
 
 ## Layout and composition
 

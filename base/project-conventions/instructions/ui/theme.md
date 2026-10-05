@@ -68,7 +68,7 @@ Prefer perceptually consistent color spaces such as OKLCH when the toolchain sup
 
 Avoid names such as `--purple`, `--card-blue`, or `--header-gray` when the value represents a reusable semantic role. Component aliases may reference semantic tokens when a component needs a stable public contract.
 
-When using ShadCN UI, retain its semantic token contract and map the product palette into those tokens. Extend the token system instead of bypassing it with scattered arbitrary colors.
+When using shadcn/ui, retain its semantic token contract and map the product palette into those tokens. Extend the token system instead of bypassing it with scattered arbitrary colors.
 
 ## Geometry and borders
 
@@ -98,12 +98,13 @@ Treat shadows and glows separately. Shadows communicate elevation; glows communi
 
 ## Dark and light modes
 
-Support dark and light modes when the product benefits from both. Dark mode is often the stronger expression of the preferred aesthetic, but light mode must remain a first-class design rather than an afterthought.
+**Required:** Every visible application UI must support both dark and light modes. Dark mode is often the stronger expression of the preferred aesthetic, but light mode must remain a first-class design rather than an afterthought.
 
 Theme selection should:
 
 - respect the system preference on first use unless the product requires another default;
 - persist an explicit user choice;
+- provide a visible theme control as defined by the application-experience conventions;
 - update the document color scheme and browser theme color;
 - synchronize embedded desktop chrome when a web UI is hosted in a desktop shell; and
 - avoid a flash of the wrong theme during startup where practical.
