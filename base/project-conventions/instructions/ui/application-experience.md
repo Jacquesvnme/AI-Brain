@@ -63,6 +63,44 @@ Keep totals close to the content or control they explain. Recalculate them when 
 
 Keep these controls together as a coherent collection toolbar when practical. Do not add nonfunctional controls or filters with only one possible value.
 
+## Empty states
+
+**Required:** Design an empty state for every section, collection, dashboard region, table, list, search result, or detail surface that can legitimately contain no data. Do not assume that data will always exist, and do not leave an unexplained blank region when it does not.
+
+An empty state should:
+
+- state clearly that no data is available;
+- distinguish an initially empty collection from a search or filter with no matches;
+- explain what the user can do next when an action is available;
+- provide a relevant primary action, such as creating an item or clearing filters, without inventing an action the product cannot perform; and
+- preserve enough layout context that the user understands which section is empty.
+
+Keep loading, empty, error, and populated states distinct. Do not briefly display an empty state while a request is still loading, and do not present an error as though the collection merely contains no records.
+
+## Error feedback
+
+**Required:** Provide one consistent application-level mechanism for presenting errors to the user. Translate technical failures into concise, actionable language and keep exception details, stack traces, internal paths, and sensitive data out of the interface.
+
+Use a dismissible toast notification for recoverable, transient, or background-operation failures. Place the toast consistently in one unobtrusive screen corner, such as the top-left, bottom-left, or bottom-right. Keep it visible for approximately ten seconds by default, pause dismissal while the user is interacting with it, and provide an explicit close button.
+
+Use a modal error dialog when the failure blocks the current workflow, requires acknowledgment, risks data loss, or needs a user decision. A blocking error dialog must not disappear automatically or close on an arbitrary timer. Keep it present until the user selects an explicit action such as `OK`, `Retry`, or `Cancel`; include only actions that have real behavior.
+
+Announce error feedback accessibly, move focus into a blocking dialog, restore focus when it closes, and avoid showing the same failure simultaneously as both a toast and a dialog. Field-level validation should remain next to the affected input instead of being replaced by a generic application notification.
+
+## Service status
+
+**Required:** Every front end connected to an API must display a persistent service-status control in the application shell. Place it in a stable edge or corner location, normally near the bottom of a sidebar or in the upper-left or upper-right application chrome.
+
+The control is a compact button-like block containing a status dot followed by a short text label. It uses these states:
+
+- **Checking:** orange dot with a restrained pulse or wave animation and the text `Checking`;
+- **Live:** green dot and the text `Live` after `/status` returns `200 OK` with the expected successful response; and
+- **Unavailable:** red dot and the text `Unavailable` after a failed request, non-success status, timeout, or invalid response.
+
+Check the service automatically when the application starts. Clicking the control performs a new check: immediately enter the Checking state, call `GET /status`, and then update the control from the response. Prevent overlapping checks while one is already running.
+
+The dot color is the required visual signal. The label may remain a neutral foreground color or adopt the state color when contrast remains accessible. Do not rely on color alone: retain the text label, expose the current state to assistive technology, and announce state changes through an appropriate live region. Respect reduced-motion preferences by replacing the loading animation with a non-animated Checking treatment.
+
 ## Developer information
 
 **Preferred:** Add a developer or about control near the bottom of a persistent left sidebar when that shell exists. The control opens a dialog or popover containing useful technical information about the application, such as:
@@ -90,7 +128,9 @@ Hover treatment should reinforce interactivity through a consistent change in su
 ## Applying these features
 
 1. Apply every required feature to a visible UI.
-2. Evaluate each preferred feature against the product's navigation, data, and available integrations.
-3. Include a preferred feature when it provides real utility and can be implemented completely.
-4. Omit inapplicable features rather than adding dead, empty, or misleading controls.
-5. Verify the experience in both themes, at relevant viewport sizes, and with keyboard navigation.
+2. Verify loading, empty, error, and populated states for every data-driven section.
+3. Verify the service-status control against live, unavailable, malformed-response, and retry scenarios.
+4. Evaluate each preferred feature against the product's navigation, data, and available integrations.
+5. Include a preferred feature when it provides real utility and can be implemented completely.
+6. Omit inapplicable features rather than adding dead, empty, or misleading controls.
+7. Verify the experience in both themes, at relevant viewport sizes, and with keyboard navigation.
