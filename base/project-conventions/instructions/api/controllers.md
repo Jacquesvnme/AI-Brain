@@ -28,7 +28,34 @@ public sealed class StatusController(IMediator mediator) : ControllerBase
 }
 ```
 
-Use an API route based on the controller's resource name, normally `api/[controller]` or an explicit equivalent such as `api/status` or `api/mods`. Keep routes stable and user-facing. A method name may be more descriptive than its route segment.
+Use an API route based on the controller's resource name. Keep routes stable and user-facing. A method name may be more descriptive than its route segment.
+
+## RESTful routing
+
+**Required:** Design HTTP APIs as RESTful, resource-oriented APIs unless the user explicitly requires another API style. Routes identify resources, while HTTP methods express the operation performed on those resources.
+
+Use nouns for resource paths and prefer plural resource names for collections. Represent relationships through nested resource paths when that relationship is part of the public contract. Do not encode routine CRUD operations as action routes such as `/get-mods`, `/create-mod`, or `/delete-mod`; use `GET`, `POST`, `PUT`, `PATCH`, and `DELETE` against the applicable resource instead.
+
+**Required:** Write every literal route segment in kebab-case. Assume kebab-case for all API paths unless the user explicitly authorizes another casing convention. Do not switch to PascalCase, camelCase, snake_case, or another route style merely because it matches a controller, method, or type name.
+
+```csharp
+[ApiController]
+[Route("api/mod-collections")]
+public sealed class ModCollectionsController(IMediator mediator) : ControllerBase
+{
+    [HttpGet("{collectionId:guid}")]
+    public async Task<ActionResult<GetModCollectionResponse>> GetModCollection(
+        Guid collectionId,
+        CancellationToken cancellationToken)
+    {
+        // Endpoint flow omitted.
+    }
+}
+```
+
+Route parameter values are identifiers or user data and are not recased. Parameter placeholder names remain implementation identifiers; the kebab-case requirement applies to the literal path segments exposed to API consumers.
+
+Prefer explicit route templates such as `api/mod-collections`. Use `[controller]` route tokens only when the application configures a route-token transformer that guarantees kebab-case output for every controller name.
 
 ## Endpoint methods
 
