@@ -39,6 +39,7 @@ An explicit user requirement and an established project-specific convention take
 ## API conventions
 
 - **controllers.md:** Read when creating or changing API controllers. `{project-path}\base\project-conventions\instructions\api\controllers.md`
+- **observability.md:** Read when creating the API for a React Web API solution or when configuring API logging, console output, request logging, or Serilog. `{project-path}\base\project-conventions\instructions\api\observability.md`
 - **validators.md:** Read when creating or changing API input validators or controller validation flow. `{project-path}\base\project-conventions\instructions\api\validators.md`
 
 ## Domain conventions
