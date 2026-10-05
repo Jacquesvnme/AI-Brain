@@ -68,7 +68,7 @@ Create one section for every `.csproj` and `.esproj` project in the solution.
 
 For each project, include:
 
-- the full project name;
+- the full project name as the complete section heading, without a numbered prefix such as `Project 1`;
 - the exact command or commands used in PowerShell to create it; and
 - the exact package-manager command used to add each direct package dependency.
 
