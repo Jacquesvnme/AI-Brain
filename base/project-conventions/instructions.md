@@ -31,6 +31,7 @@ An explicit user requirement and an established project-specific convention take
 
 ## General conventions
 
+- **implementation-scope.md:** Always read before inspecting or changing project implementation. It defines the default front-end scope, restricted component projects, explicit authorization requirements, and creation and validation exceptions. `{project-path}\base\project-conventions\instructions\general\implementation-scope.md`
 - **comments-and-documentation.md:** Read when creating or revising comments, XML documentation, README content, or other technical prose. `{project-path}\base\project-conventions\instructions\comments-and-documentation.md`
 - **errors-and-results.md:** Read when defining failures, exceptions, validation outcomes, or result types. `{project-path}\base\project-conventions\instructions\errors-and-results.md`
 - **handlers.md:** Read when creating or changing application handlers. `{project-path}\base\project-conventions\instructions\handlers.md`
