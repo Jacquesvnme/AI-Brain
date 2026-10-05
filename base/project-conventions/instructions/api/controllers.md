@@ -21,7 +21,7 @@ Controllers normally inject `IMediator` through a primary constructor and store 
 /// Reports the availability of the API and its required dependencies.
 /// </summary>
 [ApiController]
-[Route("api/status")]
+[Route("status")]
 public sealed class StatusController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
@@ -56,6 +56,54 @@ public sealed class ModCollectionsController(IMediator mediator) : ControllerBas
 Route parameter values are identifiers or user data and are not recased. Parameter placeholder names remain implementation identifiers; the kebab-case requirement applies to the literal path segments exposed to API consumers.
 
 Prefer explicit route templates such as `api/mod-collections`. Use `[controller]` route tokens only when the application configures a route-token transformer that guarantees kebab-case output for every controller name.
+
+## Required status endpoint
+
+**Required:** Every API exposes an unauthenticated `GET /status` endpoint through `StatusController`. This exact root-level path is the standard readiness contract and is intentionally not placed under the usual `api/` prefix.
+
+The status endpoint:
+
+- accepts no body and requires no authentication or authorization;
+- sends one `GetStatusQuery` to `GetStatusHandler` through the mediator;
+- returns `200 OK` with a stable successful response when the API and its required dependencies are available; and
+- returns `503 Service Unavailable` with safe problem details when a required database or dependency cannot be reached.
+
+Mark the action with `[AllowAnonymous]` even when the current authorization configuration already permits it, so the public status contract remains explicit.
+
+```csharp
+[ApiController]
+[Route("status")]
+public sealed class StatusController(IMediator mediator) : ControllerBase
+{
+    private readonly IMediator _mediator = mediator;
+
+    [AllowAnonymous]
+    [HttpGet(Name = nameof(GetStatus))]
+    public async Task<ActionResult<GetStatusResponse>> GetStatus(
+        CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(
+            new GetStatusQuery(),
+            cancellationToken);
+
+        if (response == null || !response.Success)
+        {
+            return Problem(
+                statusCode: StatusCodes.Status503ServiceUnavailable,
+                title: "Service unavailable",
+                detail: response?.Message ?? "The service status could not be determined.");
+        }
+
+        return Ok(response);
+    }
+}
+```
+
+The controller never accesses the database directly. When the application has a database, `GetStatusHandler` creates its own context through `IDbContextFactory<Context>` and calls `database.Database.CanConnectAsync(cancellationToken)`. A `true` result reports success; `false` or a safe, handled connectivity failure reports failure. Follow `{project-path}\base\project-conventions\instructions\infrastructure\database.md` for context creation and disposal.
+
+When the application has no database, the handler returns a successful response without inventing a database check. Keep any other readiness checks fast, local, and limited to dependencies that are genuinely required for the application to serve requests.
+
+`CanConnectAsync` verifies connectivity, not whether every migration is current. Do not turn `/status` into a deep diagnostic endpoint or expose connection strings, filesystem paths, exception text, or other internal details in its response.
 
 ## Endpoint methods
 
@@ -131,6 +179,7 @@ Controller documentation is part of the public API contract. Every controller re
 /// </remarks>
 /// <response code="200">The API connected to the database successfully.</response>
 /// <response code="503">The API could not connect to the database.</response>
+[AllowAnonymous]
 [HttpGet(Name = nameof(GetStatus))]
 [ProducesResponseType(
     typeof(GetStatusResponse),
