@@ -40,7 +40,7 @@ Keep the query, response, and result in the handler file when they belong only t
 
 ## Construction and dependencies
 
-Use a primary constructor for injected dependencies. Database contexts, loggers, clients, and other collaborators belong there. Copy constructor parameters into private readonly fields directly inside the class:
+Use a primary constructor for injected dependencies. Every handler receives `ILogger<THandler>` so unexpected failures can be recorded at the operation boundary. Database contexts, clients, and other collaborators belong there when the operation requires them. Copy constructor parameters into private readonly fields directly inside the class:
 
 ```csharp
 /// <summary>
@@ -67,32 +67,76 @@ Database handlers inject `IDbContextFactory<Context>` and create an independentl
 A typical `Handle` method:
 
 1. receives the query or command and a `CancellationToken`;
-2. calls the main private operation method;
-3. maps that outcome into the handler response;
-4. copies `Success` and `Message` into the response;
-5. maps any returned data into the result payload; and
-6. returns the response.
+2. enters a `try` block;
+3. calls the main private operation method;
+4. maps that outcome into the handler response;
+5. copies `Success` and `Message` into the response;
+6. maps any returned data into the result payload;
+7. returns the response;
+8. allows cancellation to propagate; and
+9. catches any other unhandled exception, logs it, and returns a safe failed response.
 
 ```csharp
 public async Task<GetStatusResponse> Handle(
     GetStatusQuery request,
     CancellationToken cancellationToken)
 {
-    var outcome = await GetStatus(cancellationToken);
-
-    return new GetStatusResponse
+    try
     {
-        Success = outcome.Success,
-        Message = outcome.Message,
-        Result = new GetStatusResult
+        var outcome = await GetStatus(cancellationToken);
+
+        return new GetStatusResponse
         {
-            ServiceStatus = outcome.Success ? "Status: Live" : "Status: Down"
-        }
-    };
+            Success = outcome.Success,
+            Message = outcome.Message,
+            Result = new GetStatusResult
+            {
+                ServiceStatus = outcome.Success ? "Status: Live" : "Status: Down"
+            }
+        };
+    }
+    catch (OperationCanceledException)
+    {
+        throw;
+    }
+    catch (Exception exception)
+    {
+        _logger.LogError(exception, "Unhandled exception occurred.");
+
+        return new GetStatusResponse
+        {
+            Success = false,
+            Message = "Unhandled exception occurred.",
+            Result = new GetStatusResult
+            {
+                ServiceStatus = "Status: Down"
+            }
+        };
+    }
 }
 ```
 
 Construct a response for both success and failure. The controller needs a stable response contract so it can inspect `Success` and `Message`. Do not make the controller infer failure from missing payload data.
+
+Use `"Unhandled exception occurred."` as the standard log message and safe response message for this fallback until a handler defines a more useful operation-specific message. Pass the exception object to `LogError` so its technical details and stack trace reach the configured application log. Do not include the exception object, exception message, or stack trace in the response sent to a controller, frontend, or other consumer.
+
+When a response has a result, make that result nullable and use `Result = null` in the unhandled-exception response unless the operation has a meaningful safe fallback. `GetStatusHandler` is the standard exception: it returns a result whose service status is `"Status: Down"`. When a response has no result, return only `Success = false` and the standard message rather than adding an empty result.
+
+An ordinary result-bearing handler uses this fallback shape:
+
+```csharp
+catch (Exception exception)
+{
+    _logger.LogError(exception, "Unhandled exception occurred.");
+
+    return new EditUserResponse
+    {
+        Success = false,
+        Message = "Unhandled exception occurred.",
+        Result = null
+    };
+}
+```
 
 The request parameter may be unused for an empty query, but it remains part of the MediatR contract. Do not discard the cancellation token.
 
@@ -155,7 +199,7 @@ Do not convert `OperationCanceledException` into an ordinary failed response. Ca
 
 Expected failures return a failed outcome. Do not throw exceptions for not-found data, invalid input, conflicts, unavailable optional data, or other conditions the application can represent normally.
 
-Catch exceptions at the boundary where they can be translated into a useful outcome. Log technical detail when a logger is available, but return a safe, contextual message rather than exposing connection strings, paths, SQL, stack traces, or other internal details.
+The public asynchronous `Handle` method is the final exception boundary for a handler. Wrap its operation call and response mapping in the standard `try` and `catch` structure. Log every caught unexpected exception through the handler's `ILogger<THandler>`, then return the standard safe failed response. Do not catch and translate an exception without logging it, and do not expose connection strings, paths, SQL, stack traces, exception messages, or other internal details in that response.
 
 Throw only when the application cannot safely start or continue, such as a missing mandatory database configuration during startup. See `errors-and-results.md` for the complete failure policy.
 

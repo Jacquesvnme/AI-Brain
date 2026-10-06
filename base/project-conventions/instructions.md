@@ -35,11 +35,11 @@ An explicit user requirement and an established project-specific convention take
 - **comments-and-documentation.md:** Read when creating or revising comments, XML documentation, README content, or other technical prose. `{project-path}\base\project-conventions\instructions\comments-and-documentation.md`
 - **errors-and-results.md:** Read when defining failures, exceptions, validation outcomes, or result types. `{project-path}\base\project-conventions\instructions\errors-and-results.md`
 - **handlers.md:** Read when creating or changing application handlers. `{project-path}\base\project-conventions\instructions\handlers.md`
+- **observability.md:** Read when creating or configuring an API, Console, or Desktop executable, or when changing error logging, console output, request logging, built-in `ILogger`, or Serilog. `{project-path}\base\project-conventions\instructions\api\observability.md`
 
 ## API conventions
 
 - **controllers.md:** Read when creating or changing API controllers and when implementing the required `GET /status` endpoint. `{project-path}\base\project-conventions\instructions\api\controllers.md`
-- **observability.md:** Read when creating the API for a React Web API solution or when configuring API logging, console output, request logging, or Serilog. `{project-path}\base\project-conventions\instructions\api\observability.md`
 - **validators.md:** Read when creating or changing API input validators or controller validation flow. `{project-path}\base\project-conventions\instructions\api\validators.md`
 
 ## Domain conventions

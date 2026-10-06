@@ -64,4 +64,4 @@ Apply the Serilog and console-logging requirements in:
 
 - **observability.md:** `{project-path}\base\project-conventions\instructions\api\observability.md`
 
-This requirement is specific to the React Web API layout. Do not infer that it applies to the React Web API with Desktop layout.
+The API keeps console logging when it is part of the React Web API with Desktop layout.

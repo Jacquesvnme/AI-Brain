@@ -90,3 +90,7 @@ When the solution contains an Infrastructure database, `ApiHost.cs` runs the Inf
 ### Application settings
 
 `appsettings.json` contains the default application configuration. Environment-specific files such as `appsettings.Development.json` override those defaults for their applicable environments.
+
+## Logging
+
+The API uses injected `ILogger<T>` for application logging and routes it through Serilog. Console output and Serilog request logging are required; do not add a local log sink by default. Apply `{project-path}\base\project-conventions\instructions\api\observability.md`.

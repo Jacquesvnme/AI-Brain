@@ -70,10 +70,12 @@ An exception is appropriate when a required startup invariant is missing and the
 At runtime boundaries:
 
 - catch exceptions that can be translated into a meaningful failed result;
-- log the exception and operation context when logging is available;
+- log every caught unexpected exception and its structured operation context through the injected `ILogger<T>`;
 - do not expose stack traces, SQL, credentials, connection strings, or sensitive filesystem paths in `Message`;
 - do not use an empty catch block; and
 - do not catch `OperationCanceledException` as an ordinary application failure.
+
+Executable projects must configure built-in logging with Serilog according to `{project-path}\base\project-conventions\instructions\api\observability.md`. Do not silently skip error logging because a logger was not wired; correct the executable composition root instead.
 
 Fatal startup exceptions should contain enough context for the operator to correct the configuration. Runtime client messages should explain what failed and what the user can do, without leaking internals.
 

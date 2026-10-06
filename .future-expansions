@@ -71,9 +71,5 @@ base/
    - theme and colors
    - no documentation
 - talk a bit about mobile reactiveness
-- If project is not required like identity then remove
 - Describe more details on the Program.cs to ApiHost.cs
-- Describe dependency injection
 - Look into describing launch settings.json
-- add more information about error logging
-  - private readonly ILogger<EditUserHandler> _logger = logger;

@@ -92,6 +92,10 @@ Do not place business or feature behavior in `Program.cs`. Adding or changing co
 
 `appsettings.json` contains the Console project's application configuration and belongs in the root of the Console project directory.
 
+## Logging
+
+The Console project uses injected `ILogger<T>` for application logging and routes it through Serilog with console output. Do not add a local log sink by default. Apply `{project-path}\base\project-conventions\instructions\api\observability.md`.
+
 ## Documentation
 
 Public Console application types, records, services, configuration models, and public data members follow the shared comment and documentation conventions. `Application.Run` and private helper methods do not need XML documentation when their names and signatures make the behavior clear. Document non-obvious sequencing, side effects, configuration requirements, and failure behavior.
