@@ -21,6 +21,8 @@ These instructions complement project creation and project layout. Apply them to
 
 ## Git repository initialization
 
+The required `git-commits` rule prohibits AI assistants from staging or committing ordinary work. This section defines its only exception: the one-time initial baseline commit for a brand-new base project.
+
 Every new project must have a Git repository initialized in the topmost directory of the current project. For the standard layouts, this is the outer solution directory that contains the solution and inner source directory. The repository metadata is a required part of the project baseline even though it is not created from a template.
 
 After the topmost project directory exists, run the following command from that directory:
@@ -38,7 +40,7 @@ git add .
 git commit -m "Initial commit"
 ```
 
-Create this initial commit only once, as the final step of establishing the new project's baseline. If the target directory is already part of a Git repository or has existing Git history, preserve that repository and history; do not reinitialize it or create another `Initial commit` under this instruction.
+Create this initial commit only once, as the final step of establishing the new project's baseline. If the target directory is already part of a Git repository or has existing Git history, preserve that repository and history; do not reinitialize it or create another `Initial commit` under this instruction. After this one-time commit, do not stage or commit later changes.
 
 ## AGENTS.md
 
