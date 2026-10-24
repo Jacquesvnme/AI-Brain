@@ -29,10 +29,10 @@ If no matching project-context directory exists, do not create one. Rely on the 
 
 1. Read `{project-path}\projects\projects.md` and follow its routing instructions.
 2. Apply its project-selection instructions to the current repository or product.
-3. Read `{project-path}\projects\project-upkeep.md` and follow its creation and upkeep instructions for the selected project.
+3. Read `{project-path}\skills\custom\documentation-mode\project-upkeep.md` and follow its creation and upkeep instructions for the selected project.
 
 If no current repository or product can be identified, no project upkeep is required.
 
 ## Boundaries
 
-Documentation Mode authorizes only the project-context creation and upkeep defined in `{project-path}\projects\project-upkeep.md`. It does not authorize unrelated project changes.
+Documentation Mode authorizes only the project-context creation and upkeep defined in `{project-path}\skills\custom\documentation-mode\project-upkeep.md`. It does not authorize unrelated project changes.
