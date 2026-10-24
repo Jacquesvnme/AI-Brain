@@ -8,14 +8,6 @@ Identify the project currently being discussed or modified and look for its matc
 
 Project-specific context supplements the shared AI Brain rules. An explicit project-specific decision takes precedence over a shared preference when both apply to the same concern. Required shared rules continue to apply unless a higher-priority instruction explicitly overrides them.
 
-## Project upkeep
-
-When project-context upkeep applies, read and follow:
-
-`{project-path}\projects\project-upkeep.md`
-
-That file defines the upkeep mechanics and the responsibility of each project-context file.
-
 ## Applying project context
 
 1. Identify the current project by repository and product name.

@@ -28,8 +28,8 @@ If no matching project-context directory exists, do not create one. Rely on the 
 ## Workflow when enabled
 
 1. Read `{project-path}\projects\projects.md` and follow its routing instructions.
-2. Apply its project selection and upkeep instructions to the current repository or product.
-3. If the project-context directory does not exist and material facts need to be recorded, follow the creation authorization and naming rules in `{project-path}\projects\project-upkeep.md`.
+2. Apply its project-selection instructions to the current repository or product.
+3. Read `{project-path}\projects\project-upkeep.md` and follow its creation and upkeep instructions for the selected project.
 
 If no current repository or product can be identified, no project upkeep is required.
 
