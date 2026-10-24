@@ -40,7 +40,9 @@ For example:
 - `0002-collection-management.md`
 - `0003-statistics-dashboard.md`
 
-Assign the next identifier by finding the highest valid existing build number and adding one. Start at `0001` when no build documents exist. Do not fill abandoned gaps, reuse an identifier, or renumber existing documents; stable identifiers preserve the historical sequence.
+For a new record, capture the highest valid existing build number before creating the document, using `0000` when no build documents exist. Assign one greater than that captured number, so the first record is `0001`. Do not fill abandoned gaps, assign an existing identifier to a different build, or renumber existing documents; stable identifiers preserve the historical sequence.
+
+When maintaining an existing record for the same build, update it in place and preserve its identifier and filename. Do not assign a new identifier or create a second record merely because the document is being updated.
 
 Keep the description short but specific. Do not use spaces, underscores, an additional numeric prefix, or a generic name such as `changes`.
 
@@ -50,13 +52,13 @@ One document represents one coherent, materially significant build. It is an imp
 
 Write enough context and instruction for another capable agent or developer to understand and carry out the work without the original conversation. Record actionable rationale and constraints, but do not include private chain-of-thought reasoning.
 
-## Creation workflow
+## Creation and update workflow
 
 1. Identify the topmost directory of the current project and confirm that it is the intended documentation target.
-2. Determine whether the record is being written before implementation, during implementation, or retrospectively after implementation.
-3. Inspect the existing `Build` directory, if present, and assign the next identifier from the highest valid existing build number.
+2. Determine whether to create a new record or update an existing record for the same build, and whether the record is being written before, during, or after implementation.
+3. For a new record, inspect the existing `Build` directory, if present, capture the highest valid existing build number before creating the document, and assign the next identifier. For an update, identify the existing record and retain its identifier and filename.
 4. Read the Git state needed for the Build information section. Record facts rather than guessing when history is incomplete.
-5. Copy the central template to the assigned destination and filename, then replace or remove every double-braced instruction.
+5. For a new record, copy the central template to the assigned destination and filename, then replace or remove every double-braced instruction. For an update, edit the existing record in place and preserve its relevant content and history.
 6. Write implementation-oriented context, goals, scope, instructions, decisions, affected areas, verification, risks, and acceptance criteria.
 7. Verify the filename, sequence, required sections, resolved placeholders, and Git metadata.
 
@@ -104,7 +106,7 @@ When completing a build, record material deviations from the original instructio
 Before finishing:
 
 1. confirm the destination is the current project's topmost `Build` directory;
-2. confirm the identifier is one greater than the highest existing build identifier;
+2. for a new record, confirm the identifier is one greater than the highest valid build number captured before creation (`0000` if none existed), and is not shared by another record; for an update, confirm the original identifier and filename are unchanged;
 3. confirm the filename description is concise kebab case;
 4. confirm exactly one document represents the coherent build;
 5. confirm every required section contains project-specific, actionable content;
