@@ -29,7 +29,10 @@ If no matching project-context directory exists, do not create one. Rely on the 
 
 1. Read `{project-path}\projects\projects.md` and follow its routing instructions.
 2. Apply its project-selection instructions to the current repository or product.
-3. Read `{project-path}\skills\custom\documentation-mode\project-upkeep.md` and follow its creation and upkeep instructions for the selected project.
+3. Use the completed work and relevant context already read to determine whether material project facts need to be recorded or updated. An explicit user request to create or maintain project context also requires upkeep.
+4. Only when upkeep is needed, read `{project-path}\skills\custom\documentation-mode\project-upkeep.md` and follow its creation and upkeep instructions for the selected project.
+
+When no project-context creation or update is needed, skip the upkeep instructions. Continue reading existing project context as relevant to the task; reading context does not itself trigger upkeep.
 
 If no current repository or product can be identified, no project upkeep is required.
 
