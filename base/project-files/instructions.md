@@ -22,6 +22,14 @@ Then identify the project types present and apply the matching project-specific 
 
 Apply every instruction in each selected file set.
 
+## Conditional documentation files
+
+Build Documentation is not a standard file required in every project. When the `build-documentation` optional rule is active and the user has issued `Create Build Documentation`, read and apply:
+
+- **Build Documentation:** `{project-path}\base\project-files\documentation\instructions.md`
+
+Create a project's `Build` directory only when its first build document is authorized.
+
 ## Important notice
 
 Text enclosed in double braces, such as `{{instruction}}`, is instructional placeholder text inside the project file templates.

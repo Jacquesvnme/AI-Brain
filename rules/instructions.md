@@ -19,6 +19,7 @@ Required rules apply to every project and task. Read every required rule.
 
 Optional rules apply only when their descriptions match the current task or the user explicitly requests them.
 
+- **build-documentation.md:** `{project-path}\rules\optional\build-documentation.md`
 - **project-creation.md:** `{project-path}\rules\optional\project-creation.md`
 - **project-layout.md:** `{project-path}\rules\optional\project-layout.md`
 - **project-structure.md:** `{project-path}\rules\optional\project-structure.md`
