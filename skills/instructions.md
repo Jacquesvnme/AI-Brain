@@ -16,6 +16,7 @@ Use this file as the catalogue router.
 ## Custom workflows
 
 - **build-documentation.md:** Create and maintain a numbered implementation record for a materially significant project build after explicit user authorization. `{project-path}\skills\custom\build-documentation.md`
+- **command.md:** Hold state-changing work behind a user-defined command or explicit approval gate until the user intentionally releases it. `{project-path}\skills\custom\command.md`
 - **documentation-mode.md:** Use the current project's local setting to control required project-context upkeep. `{project-path}\skills\custom\documentation-mode.md`
 - **visualize-ui.md:** Produce a rendered UI concept for critique and approval. `{project-path}\skills\custom\visualize-ui.md`
 
