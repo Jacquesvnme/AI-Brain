@@ -11,7 +11,6 @@ Required rules apply to every project and task. Read every required rule.
 - **documentation-mode.md:** `{project-path}\rules\required\documentation-mode.md`
 - **progressive-disclosure.md:** `{project-path}\rules\required\progressive-disclosure.md`
 - **read-only-content.md:** `{project-path}\rules\required\read-only-content.md`
-- **project-conventions.md:** `{project-path}\rules\required\project-conventions.md`
 - **implementation-scope.md:** `{project-path}\rules\required\implementation-scope.md`
 - **project-upkeep.md:** `{project-path}\rules\required\project-upkeep.md`
 
@@ -21,6 +20,7 @@ Optional rules apply only when their descriptions match the current task or the 
 
 - **build-documentation.md:** `{project-path}\rules\optional\build-documentation.md`
 - **command.md:** `{project-path}\rules\optional\command.md`
+- **project-conventions.md:** `{project-path}\rules\optional\project-conventions.md`
 - **project-creation.md:** `{project-path}\rules\optional\project-creation.md`
 - **project-layout.md:** `{project-path}\rules\optional\project-layout.md`
 - **project-structure.md:** `{project-path}\rules\optional\project-structure.md`
