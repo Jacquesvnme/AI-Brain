@@ -1,4 +1,4 @@
-# Codebase Design skill
+# Skill catalog entry: Codebase Design
 
 ## Purpose
 

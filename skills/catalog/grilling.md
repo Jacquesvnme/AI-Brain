@@ -1,4 +1,4 @@
-# Grill Me skill
+# Skill catalog entry: Grill Me
 
 ## Purpose
 

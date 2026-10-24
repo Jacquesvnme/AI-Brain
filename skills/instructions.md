@@ -1,17 +1,17 @@
 # Skill instructions
 
-This directory is the central catalogue for reusable agent workflows used with the AI Brain. It keeps workflow capabilities separate from project conventions: conventions describe the desired project result, while skills describe a repeatable way for an agent to perform a task.
+This directory is the central catalog for reusable agent workflows used with the AI Brain. It keeps workflow capabilities separate from project conventions: conventions describe the desired project result, while skills describe a repeatable way for an agent to perform a task.
 
-The catalogue documents when a skill applies, how it relates to other guidance, and where it came from. These files do not replace an installed skill's `SKILL.md`. When a skill is available, read and follow its active `SKILL.md` before using it because the installed workflow may change independently of this catalogue.
+The catalog documents when a skill applies, how it relates to other guidance, and where it came from. These files do not replace an installed skill's `SKILL.md`. When a skill is available, read and follow its active `SKILL.md` before using it because the installed workflow may change independently of this catalog.
 
-Use this file as the catalogue router.
+Use this file as the catalog router.
 
 ## Directory structure
 
 - `custom` contains reusable workflows authored for the user and the AI Brain. They may be activated through a rule even when they are not packaged as an agent skill.
-- `external` contains skills supplied outside this repository, including bundled OpenAI skills and community skills installed from public repositories.
+- `catalog` contains catalog entries for bundled OpenAI skills and community skills supplied outside this repository.
 
-`External` describes provenance, not quality or trust. Inspect the active skill and its source before installation or use. Do not call this directory `generic`: several entries are highly specialized, and the useful distinction is whether the workflow is maintained here or obtained elsewhere.
+The catalog records purpose, provenance, installation guidance, and relationships to AI Brain workflows. A catalog entry documents and routes to a skill; it does not provide or activate that skill. Before claiming to use a skill, confirm that its active `SKILL.md` is available and follow it. If the skill is unavailable, do not claim to have invoked it; use an appropriate fallback or offer the catalog's installation guidance when that matches the user's request.
 
 ## Custom workflows
 
@@ -20,19 +20,19 @@ Use this file as the catalogue router.
 - **documentation-mode.md:** Use the current project's local setting to control required project-context upkeep. `{project-path}\skills\custom\documentation-mode.md`
 - **visualize-ui.md:** Produce a rendered UI concept for critique and approval. `{project-path}\skills\custom\visualize-ui.md`
 
-## External skill catalogue
+## Skill catalog
 
-- **code-review.md:** Review a diff separately against repository standards and the originating specification. `{project-path}\skills\external\code-review.md`
-- **codebase-design.md:** Use deep-module vocabulary to design interfaces, seams, adapters, and testable modules. `{project-path}\skills\external\codebase-design.md`
-- **find-skills.md:** Discover and evaluate installable skills. `{project-path}\skills\external\find-skills.md`
-- **frontend-design.md:** Create distinctive, product-specific user interfaces. `{project-path}\skills\external\frontend-design.md`
-- **grilling.md:** Stress-test a plan or design through structured questioning. `{project-path}\skills\external\grilling.md`
-- **humanizer.md:** Revise formulaic prose without changing its meaning. `{project-path}\skills\external\humanizer.md`
-- **imagegen.md:** Generate or edit raster images, including static UI mockups and supporting visual assets. `{project-path}\skills\external\imagegen.md`
-- **improve-codebase-architecture.md:** Find architectural friction and propose module-deepening refactors. `{project-path}\skills\external\improve-codebase-architecture.md`
-- **openai-docs.md:** Retrieve current, cited guidance from official OpenAI documentation. `{project-path}\skills\external\openai-docs.md`
-- **skill-creator.md:** Create, test, evaluate, and improve reusable agent skills. `{project-path}\skills\external\skill-creator.md`
-- **visualize.md:** Create interactive, in-conversation visualizations and UI mockups. `{project-path}\skills\external\visualize.md`
+- **code-review.md:** Review a diff separately against repository standards and the originating specification. `{project-path}\skills\catalog\code-review.md`
+- **codebase-design.md:** Use deep-module vocabulary to design interfaces, seams, adapters, and testable modules. `{project-path}\skills\catalog\codebase-design.md`
+- **find-skills.md:** Discover and evaluate installable skills. `{project-path}\skills\catalog\find-skills.md`
+- **frontend-design.md:** Create distinctive, product-specific user interfaces. `{project-path}\skills\catalog\frontend-design.md`
+- **grilling.md:** Stress-test a plan or design through structured questioning. `{project-path}\skills\catalog\grilling.md`
+- **humanizer.md:** Revise formulaic prose without changing its meaning. `{project-path}\skills\catalog\humanizer.md`
+- **imagegen.md:** Generate or edit raster images, including static UI mockups and supporting visual assets. `{project-path}\skills\catalog\imagegen.md`
+- **improve-codebase-architecture.md:** Find architectural friction and propose module-deepening refactors. `{project-path}\skills\catalog\improve-codebase-architecture.md`
+- **openai-docs.md:** Retrieve current, cited guidance from official OpenAI documentation. `{project-path}\skills\catalog\openai-docs.md`
+- **skill-creator.md:** Create, test, evaluate, and improve reusable agent skills. `{project-path}\skills\catalog\skill-creator.md`
+- **visualize.md:** Create interactive, in-conversation visualizations and UI mockups. `{project-path}\skills\catalog\visualize.md`
 
 ## Selection and invocation
 

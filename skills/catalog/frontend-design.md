@@ -1,4 +1,4 @@
-# Frontend Design skill
+# Skill catalog entry: Frontend Design
 
 ## Purpose
 

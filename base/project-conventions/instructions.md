@@ -65,7 +65,7 @@ An explicit user requirement and an established project-specific convention take
 
 Skill selection is routed separately through `{project-path}\skills\skills.md`. Follow a linked skill only when it matches the task, while treating the applicable conventions in this directory as the definition of the desired project result.
 
-For an explicit review of changes since a fixed Git reference, read `{project-path}\skills\external\code-review.md`. For module interfaces, seams, testability, or architectural restructuring, read `{project-path}\skills\external\codebase-design.md` and, when the task is specifically an architecture improvement, `{project-path}\skills\external\improve-codebase-architecture.md`.
+For an explicit review of changes since a fixed Git reference, read `{project-path}\skills\catalog\code-review.md`. For module interfaces, seams, testability, or architectural restructuring, read `{project-path}\skills\catalog\codebase-design.md` and, when the task is specifically an architecture improvement, `{project-path}\skills\catalog\improve-codebase-architecture.md`.
 
 ## Planning-only files
 

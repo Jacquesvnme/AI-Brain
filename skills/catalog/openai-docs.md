@@ -1,4 +1,4 @@
-# OpenAI Docs skill
+# Skill catalog entry: OpenAI Docs
 
 ## Purpose
 

@@ -1,4 +1,4 @@
-# ImageGen skill
+# Skill catalog entry: ImageGen
 
 ## Purpose
 

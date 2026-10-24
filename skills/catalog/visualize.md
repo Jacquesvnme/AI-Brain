@@ -1,4 +1,4 @@
-# Visualize skill
+# Skill catalog entry: Visualize
 
 ## Purpose
 

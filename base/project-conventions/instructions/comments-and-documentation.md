@@ -90,7 +90,7 @@ Follow `api/controllers.md` for `[ProducesResponseType]`, `ProblemDetails`, vali
 
 Keep documentation plain, factual, and current. Describe the current contract rather than the history of how it was implemented. Avoid filler, praise, vague claims, and repeated summaries.
 
-Use the Humanizer skill when generated documentation sounds formulaic or repetitive. Read `{project-path}\skills\external\humanizer.md` before using it. Humanization must preserve every technical claim, identifier, example, link target, and code block. It must not turn precise reference prose into casual marketing language.
+Use the Humanizer skill when generated documentation sounds formulaic or repetitive. Read `{project-path}\skills\catalog\humanizer.md` before using it. Humanization must preserve every technical claim, identifier, example, link target, and code block. It must not turn precise reference prose into casual marketing language.
 
 ## Review checklist
 

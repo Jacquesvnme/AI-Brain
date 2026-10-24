@@ -1,4 +1,4 @@
-# Skill Creator skill
+# Skill catalog entry: Skill Creator
 
 ## Purpose
 
@@ -11,7 +11,7 @@ Use Skill Creator to create a new agent skill or materially improve an existing 
 - an existing skill triggers unreliably or produces inconsistent results; or
 - the user wants skill evaluations, benchmarks, or iterative human review.
 
-Do not require Skill Creator merely to add a catalogue entry or mention a skill in project documentation. Use it when the actual reusable skill definition or its evaluation suite is being created or changed.
+Do not require Skill Creator merely to add a catalog entry or mention a skill in project documentation. Use it when the actual reusable skill definition or its evaluation suite is being created or changed.
 
 ## Invoke
 

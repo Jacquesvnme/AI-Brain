@@ -1,4 +1,4 @@
-# Find Skills skill
+# Skill catalog entry: Find Skills
 
 ## Purpose
 

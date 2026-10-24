@@ -49,9 +49,9 @@ Use PNG or another raster format when the goal is a fixed visual composition, mo
 
 Use SVG for scalable static interface concepts, diagrams that depend on real shape and color, or focused component visuals. Do not use SVG merely to disguise a text wireframe.
 
-When Codex provides a native interactive visualization surface, use it for in-conversation review. Use the installed Visualize skill when available. Read `{project-path}\skills\external\visualize.md` for its role and then follow the active skill's `SKILL.md`. The final result should appear where the user can inspect it without reconstructing it from code.
+When Codex provides a native interactive visualization surface, use it for in-conversation review. Use the installed Visualize skill when available. Read `{project-path}\skills\catalog\visualize.md` for its role and then follow the active skill's `SKILL.md`. The final result should appear where the user can inspect it without reconstructing it from code.
 
-Use ImageGen when a static raster mockup is the most useful review artifact, especially for composition, color, mood, artwork, or polished visual direction. Read `{project-path}\skills\external\imagegen.md` before selecting this path. Do not use ImageGen as a substitute for inspectable interaction, responsive behavior, or implementation-ready UI source.
+Use ImageGen when a static raster mockup is the most useful review artifact, especially for composition, color, mood, artwork, or polished visual direction. Read `{project-path}\skills\catalog\imagegen.md` before selecting this path. Do not use ImageGen as a substitute for inspectable interaction, responsive behavior, or implementation-ready UI source.
 
 ## Inputs and context
 
@@ -78,7 +78,7 @@ Apply the shared conventions in:
 - `{project-path}\base\project-conventions\instructions\ui\application-experience.md`
 - `{project-path}\base\project-conventions\instructions\ui\theme.md`
 - `{project-path}\base\project-conventions\instructions\ui\front-end-design.md`
-- `{project-path}\skills\external\frontend-design.md`
+- `{project-path}\skills\catalog\frontend-design.md`
 
 The visual must make these decisions inspectable:
 

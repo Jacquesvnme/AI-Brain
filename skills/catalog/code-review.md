@@ -1,4 +1,4 @@
-# Code Review skill
+# Skill catalog entry: Code Review
 
 ## Purpose
 

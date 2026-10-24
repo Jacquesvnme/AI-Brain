@@ -1,4 +1,4 @@
-# Humanizer skill
+# Skill catalog entry: Humanizer
 
 ## Purpose
 

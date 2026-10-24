@@ -24,7 +24,7 @@ Before implementation, establish a compact design brief containing:
 - the application's geometry language; and
 - the one visual idea that should make the product memorable.
 
-Use the installed `frontend-design` skill when it is available and the task creates a new UI or materially reshapes an existing one. Read its catalogue entry at `{project-path}\skills\external\frontend-design.md` and then follow the active skill's `SKILL.md`. The skill supplements these conventions; explicit user preferences and project context still take precedence.
+Use the installed `frontend-design` skill when it is available and the task creates a new UI or materially reshapes an existing one. Read its catalog entry at `{project-path}\skills\catalog\frontend-design.md` and then follow the active skill's `SKILL.md`. The skill supplements these conventions; explicit user preferences and project context still take precedence.
 
 When the user requests a design preview before implementation, follow `{project-path}\skills\custom\visualize-ui.md`. Use the Visualize skill for interactive in-conversation review or ImageGen for a static raster concept when that format better serves the decision.
 

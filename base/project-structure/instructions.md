@@ -36,4 +36,4 @@ For example, if the application is named `SuperDummyApplication`, `PROJECT_NAME.
 
 When reviewing an existing project, compare only the applicable project-structure instructions against that project. Do not restructure unrelated projects, and do not modify an existing structure unless the task includes creating, restructuring, or correcting it.
 
-When a structure decision depends on module interfaces, seams, adapters, testability, or architectural locality, read `{project-path}\skills\external\codebase-design.md`. For an explicit architecture-improvement task, also read `{project-path}\skills\external\improve-codebase-architecture.md` before proposing structural changes.
+When a structure decision depends on module interfaces, seams, adapters, testability, or architectural locality, read `{project-path}\skills\catalog\codebase-design.md`. For an explicit architecture-improvement task, also read `{project-path}\skills\catalog\improve-codebase-architecture.md` before proposing structural changes.

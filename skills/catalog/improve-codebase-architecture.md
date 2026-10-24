@@ -1,4 +1,4 @@
-# Improve Codebase Architecture skill
+# Skill catalog entry: Improve Codebase Architecture
 
 ## Purpose
 
