@@ -30,9 +30,11 @@ This exception applies only to the new project or solution being created. It doe
 
 ## Validation exception
 
-When the user requests solution-wide, project-wide, or other explicitly broad validation, the AI may run the non-mutating validation commands needed to assess that scope across every included component.
+When the user requests solution-wide, project-wide, or other explicitly broad validation, the AI may run the build, test, and other validation commands needed to assess that scope across every included component.
 
-A validation request does not by itself authorize fixes or other modifications in restricted projects. Modify a restricted project only when the user also explicitly requests remediation in that project or otherwise clearly authorizes implementation there.
+These commands may create or update ordinary generated output, including build and intermediate files, test results, coverage reports, and disposable validation caches. This permission includes generated output inside otherwise restricted component projects.
+
+A validation request does not by itself authorize source-code fixes or changes to project configuration, dependencies, lockfiles, snapshots, or other maintained files. It also does not authorize database migrations or changes to application data. Choose validation modes that preserve those files and data; obtain explicit authorization for any required changes outside the existing modification scope.
 
 ## Boundaries
 
