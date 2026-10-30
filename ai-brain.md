@@ -16,6 +16,10 @@ If the repository moves, update this value and any standalone bootstrap referenc
 
 - **rules.md:** `{project-path}\rules\rules.md`
 
+## Project base
+
+- **base.md:** Optional navigation for project guidance relevant to the task. `{project-path}\base\base.md`
+
 ## Project context
 
 - **projects.md:** `{project-path}\projects\projects.md`
