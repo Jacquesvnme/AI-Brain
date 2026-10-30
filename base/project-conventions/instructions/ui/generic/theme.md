@@ -1,6 +1,6 @@
-# Theme conventions
+# Generic theme conventions
 
-These instructions define the preferred approach to application themes. They describe a visual system, not a fixed palette that every application must copy.
+These instructions define the preferred approach to application themes across UI frameworks. They describe a visual system, not a fixed palette that every application must copy. CSS and browser-specific mechanisms apply to web UIs; other platforms use their equivalent theme mechanisms.
 
 ## Design intent
 
@@ -41,7 +41,7 @@ For light themes, design a complete counterpart rather than mechanically inverti
 
 Store theme decisions in a centralized token layer. Components must consume semantic tokens rather than repeating raw color values.
 
-Prefer perceptually consistent color spaces such as OKLCH when the toolchain supports them. Hex and RGB remain acceptable for compatibility. Regardless of syntax, name tokens by purpose:
+Prefer perceptually consistent color spaces such as OKLCH when the toolchain supports them. Hex and RGB remain acceptable for compatibility. Regardless of syntax, name tokens by purpose. The following CSS example illustrates semantic token names for web UIs without requiring a particular framework or stylesheet location:
 
 ```css
 :root {
@@ -67,8 +67,6 @@ Prefer perceptually consistent color spaces such as OKLCH when the toolchain sup
 ```
 
 Avoid names such as `--purple`, `--card-blue`, or `--header-gray` when the value represents a reusable semantic role. Component aliases may reference semantic tokens when a component needs a stable public contract.
-
-When using shadcn/ui, retain its semantic token contract and map the product palette into those tokens. Extend the token system instead of bypassing it with scattered arbitrary colors.
 
 ## Geometry and borders
 
@@ -105,7 +103,7 @@ Theme selection should:
 - respect the system preference on first use unless the product requires another default;
 - persist an explicit user choice;
 - provide a visible theme control as defined by the application-experience conventions;
-- update the document color scheme and browser theme color;
+- update the document color scheme and browser theme color for web UIs;
 - synchronize embedded desktop chrome when a web UI is hosted in a desktop shell; and
 - avoid a flash of the wrong theme during startup where practical.
 

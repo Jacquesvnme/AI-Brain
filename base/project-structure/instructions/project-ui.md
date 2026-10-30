@@ -52,7 +52,7 @@ File names may differ when the selected framework, package manager, or build too
 
 `main.tsx` is the browser entry point and starts the front-end application. `App.tsx` is the root application component and composes the primary layout and sections.
 
-The root `index.html` is the application HTML entry document. It contains the application name, description, page-title default, favicon link, and other required document metadata defined by `{project-path}\base\project-conventions\instructions\ui\application-experience.md`.
+The root `index.html` is the application HTML entry document. It contains the application name, description, page-title default, favicon link, and other required document metadata. Apply the application-experience conventions selected through `{project-path}\base\project-conventions\instructions\ui\ui.md`.
 
 ### Assets
 

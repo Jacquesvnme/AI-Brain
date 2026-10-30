@@ -1,21 +1,21 @@
-# Application experience conventions
+# Generic application experience conventions
 
-These instructions define recurring application-wide experience features for visible user interfaces. They apply primarily to React UI projects and should be adapted to another UI technology when the same experience concern exists.
+These instructions define recurring application-wide experience features shared by UI frameworks. Browser metadata, document titles, favicons, and live regions apply to web UIs; use the target platform's equivalent mechanisms for other visible interfaces. Framework-specific files add implementation details and file locations.
 
 Required features establish the minimum application experience. Preferred features should be included when they fit the product and available data; do not add a control that has no useful behavior merely to satisfy a checklist.
 
 ## Application identity and metadata
 
-**Required:** Give every visible application its own identity. Do not ship framework placeholder branding, a default Vite title, or a generic favicon.
+**Required:** Give every visible application its own identity. Do not ship framework placeholder branding, a default framework title, or a generic favicon.
 
-The UI project's `index.html` must contain at least:
+For a web UI, the document metadata must contain at least:
 
 - the established application name in the document title;
 - a concise, product-specific meta description;
 - application-name metadata; and
 - a link to the custom SVG favicon.
 
-Use this shape and replace every placeholder with real product content:
+Use this HTML shape for a web UI, adapt the favicon URL to the framework's public-asset handling, and replace every placeholder with real product content:
 
 ```html
 <title>PROJECT_NAME</title>
@@ -26,7 +26,7 @@ Use this shape and replace every placeholder with real product content:
 
 Add other metadata when the application needs installability, link previews, mobile presentation, or platform integration. Metadata must describe the actual product and must not expose internal paths, environment details, or secrets.
 
-Create a custom `public/favicon.svg` and keep reusable application-identity artwork under `src/assets/icons`. Display the application icon or an appropriate identity mark in the upper-left area of the application shell when the layout has persistent chrome. The visible identity and favicon should belong to the same visual system.
+Provide a custom SVG favicon for web UIs and maintain reusable application-identity artwork locally, using the selected framework's file-placement guidance. Display the application icon or an appropriate identity mark in the upper-left area of the application shell when the layout has persistent chrome. The visible identity and favicon should belong to the same visual system.
 
 ## Page titles
 
@@ -38,7 +38,7 @@ Update the title when client-side navigation changes the active view. Do not lea
 
 **Required:** Support both light and dark themes and provide a visible control that lets the user switch between them. Place the control in persistent application chrome where it remains easy to find, such as the header or sidebar.
 
-Respect the system preference on first use and persist an explicit user selection. Apply the detailed theme behavior in `{project-path}\base\project-conventions\instructions\ui\theme.md`.
+Respect the system preference on first use and persist an explicit user selection. Apply the detailed theme behavior in `{project-path}\base\project-conventions\instructions\ui\generic\theme.md`.
 
 ## Navigation menu
 
@@ -101,7 +101,7 @@ Check the service immediately when the application starts and automatically ever
 
 Clicking the control performs an immediate manual check and resets the automatic schedule. Cancel the pending timer, enter the Checking state, run the request, and schedule the next automatic check for 15 seconds later. Use a resettable one-shot timer rather than allowing independent intervals to accumulate.
 
-Prevent overlapping requests. If a check is already running, do not start another automatic check; schedule the next cycle after the active request finishes. Disable repeated activation or otherwise guard the control while it is checking. Dispose the timer and cancel in-flight work when the owning component unmounts.
+Prevent overlapping requests. If a check is already running, do not start another automatic check; schedule the next cycle after the active request finishes. Disable repeated activation or otherwise guard the control while it is checking. Dispose the timer and cancel in-flight work when the owning UI is disposed or removed.
 
 The control must retain its normal hover and focus feedback between checks. During every manual or automatic request, replace the idle treatment with the required Checking animation and loading semantics.
 
@@ -133,7 +133,7 @@ Hover treatment should reinforce interactivity through a consistent change in su
 
 ## Applying these features
 
-1. Apply every required feature to a visible UI.
+1. Apply every required feature whose stated conditions match the visible UI.
 2. Verify loading, empty, error, and populated states for every data-driven section.
 3. Verify the service-status control against live, unavailable, malformed-response, manual retry, automatic 15-second polling, timer reset, and overlapping-request scenarios.
 4. Evaluate each preferred feature against the product's navigation, data, and available integrations.

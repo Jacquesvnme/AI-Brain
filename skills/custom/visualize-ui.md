@@ -73,11 +73,9 @@ For an existing product, match its navigation, typography, palette, component la
 
 The visualization must contain realistic content and the actual controls needed to understand the concept. Avoid placeholder dashboards, filler cards, arbitrary metrics, and generic marketing copy.
 
-Apply the shared conventions in:
+Apply the application-experience, theme, and front-end design conventions selected through the UI guidance, together with the Frontend Design catalog entry:
 
-- `{project-path}\base\project-conventions\instructions\ui\application-experience.md`
-- `{project-path}\base\project-conventions\instructions\ui\theme.md`
-- `{project-path}\base\project-conventions\instructions\ui\front-end-design.md`
+- `{project-path}\base\project-conventions\instructions\ui\ui.md`
 - `{project-path}\skills\catalog\frontend-design.md`
 
 The visual must make these decisions inspectable:

@@ -57,9 +57,7 @@ An explicit user requirement and an established project-specific convention take
 
 ## UI conventions
 
-- **application-experience.md:** Read when creating or changing a visible application UI, application shell, metadata, page titles, favicon, empty and error states, service status, navigation affordances, theme controls, collection tools, or developer information. `{project-path}\base\project-conventions\instructions\ui\application-experience.md`
-- **front-end-design.md:** Read for any task that creates or materially changes a user interface. `{project-path}\base\project-conventions\instructions\ui\front-end-design.md`
-- **theme.md:** Read when defining or changing colors, theme tokens, geometry, elevation, glass, glow, dark mode, or light mode. `{project-path}\base\project-conventions\instructions\ui\theme.md`
+- **ui.md:** Read when creating, changing, reviewing, or visualizing a user interface. The UI instructions select the relevant generic conventions and framework-specific additions for application experience, front-end design, and themes. `{project-path}\base\project-conventions\instructions\ui\ui.md`
 
 ## Related skills
 

@@ -1,6 +1,6 @@
-# Front-end design conventions
+# Generic front-end design conventions
 
-These instructions define the preferred design process and visual character for user interfaces. They apply to new interfaces and to material redesigns of existing interfaces. For small changes, preserve the established product language unless the user requests a redesign.
+These instructions define the preferred design process and visual character shared by UI frameworks. They apply to new interfaces and to material redesigns of existing interfaces. Browser-specific mechanisms apply to web UIs; use the target platform's equivalent accessibility and interaction mechanisms for other visible interfaces. For small changes, preserve the established product language unless the user requests a redesign.
 
 ## Reference priority
 
@@ -46,25 +46,13 @@ Retro-futuristic, cyberpunk, glassmorphic, neo-brutalist, organic, and bento inf
 
 Spend visual boldness in one or two places. A luminous active state, atmospheric background, distinctive information layout, or strong imagery can carry the identity. Keep surrounding elements quieter.
 
-## Component foundation
+## Interface icons
 
-**Required:** Use shadcn/ui as the component foundation for React front ends, including the React Web API and React Desktop layouts. Start with an applicable shadcn/ui component or primitive instead of creating a custom replacement.
-
-Create a custom component only when shadcn/ui does not provide a suitable foundation or when adapting one of its primitives would make the result less accessible, maintainable, or fit for the product. Record the concrete reason in the implementation or handoff when the choice is not evident from the code. Do not bypass shadcn/ui merely to reproduce a standard button, dialog, menu, popover, form control, table, card, or navigation primitive.
-
-Use shadcn/ui's accessible behavior, semantic token contract, and composable primitives. Treat generated components as owned source code:
-
-- adapt their tokens and variants to the product;
-- remove unused variants and dependencies;
-- preserve keyboard and screen-reader behavior;
-- avoid leaving the default shadcn/ui appearance unchanged; and
-- keep custom components compatible with the same theme and interaction language.
-
-**Required:** Use SVG for interface icons and store the SVG source locally under the UI project's `src/assets/icons` directory. Do not depend on remotely hosted icon files. When an icon originates from Lucide or another approved icon set, add the selected SVG asset to the local icon directory rather than introducing inconsistent icon sources throughout the component tree.
+**Required:** Use SVG for interface icons and store the SVG source locally in the selected framework's designated asset directory. Do not depend on remotely hosted icon files. When an icon originates from Lucide or another approved icon set, add the selected SVG asset to the local icon directory rather than introducing inconsistent icon sources throughout the component tree.
 
 Keep icon stroke or fill treatment, view boxes, sizing, and alignment consistent. Icons should clarify actions or categories; they should not be scattered as decoration. Provide accessible labels for icon-only controls and treat decorative SVGs as hidden from assistive technology.
 
-Application identity, favicon, metadata, page-title, application-shell, and common experience-feature requirements are defined in `{project-path}\base\project-conventions\instructions\ui\application-experience.md`.
+Application identity, favicon, metadata, page-title, application-shell, and common experience-feature requirements are defined in `{project-path}\base\project-conventions\instructions\ui\generic\application-experience.md`.
 
 ## Layout and composition
 
