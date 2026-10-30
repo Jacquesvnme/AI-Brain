@@ -14,7 +14,7 @@ If the repository moves, update this value and any standalone bootstrap referenc
 
 ## Rules
 
-- **instructions.md:** `{project-path}\rules\instructions.md`
+- **rules.md:** `{project-path}\rules\rules.md`
 
 ## Project context
 
