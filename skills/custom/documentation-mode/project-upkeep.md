@@ -12,6 +12,16 @@ Use an existing matching directory instead of creating a differently named dupli
 
 Create only the context files needed to record verified facts under the responsibilities below. Do not create empty placeholder files, copy another project's context, or invent details merely to populate a new directory.
 
+## Project entry files
+
+Use a project entry filename that matches its context-directory name: `projects/wiffy/wiffy.md` for the `wiffy` directory. When creating context for the current project, create its missing entry file alongside the context files needed for verified facts. Preserve an existing populated entry file.
+
+Until fuller documentation is explicitly requested, a newly created entry must contain only the project's top-level Markdown title followed by a newline, for example `# Wiffy`. Use the established title from existing context; if none is documented, use the directory name without inventing a product identity. Do not add descriptions, metadata, navigation, or instructions.
+
+This title-only entry identifies the project and is the sole exception to the prohibition on placeholder context files. All other context files must contain verified, relevant facts. Keep `documentation/main.md` as the separate documentation entry point; do not create missing documentation directories or placeholder documentation files to accompany a project entry.
+
+Entry creation follows the Documentation Mode controls and current-project boundaries in the referenced workflow. An explicitly requested batch of entries across existing projects does not authorize future upkeep across unrelated projects.
+
 ## File responsibilities
 
 - **architecture.md:** Briefly describe the system shape, major projects or modules, boundaries, data flow, and recognized architectural patterns. Update when those architectural facts change.

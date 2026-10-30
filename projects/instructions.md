@@ -16,3 +16,5 @@ Project-specific context supplements the shared AI Brain rules. An explicit proj
 4. Keep project-specific details out of shared rules unless the user explicitly promotes them to a reusable convention.
 
 When no matching directory exists, do not infer that another project's decisions apply.
+
+A project entry file has the same name as its directory, such as `projects/wiffy/wiffy.md`. Follow the entry-content convention in `{project-path}\skills\custom\documentation-mode\project-upkeep.md`. A title-only entry identifies the project; continue selecting relevant context files from its directory even when the entry has no links. `documentation/main.md` remains the separate documentation entry point when present.
